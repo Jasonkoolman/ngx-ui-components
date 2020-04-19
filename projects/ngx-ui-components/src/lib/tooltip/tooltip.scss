@@ -1,0 +1,27 @@
+$tooltip-max-width: 260px!default;
+$tooltip-padding: 6px 12px!default;
+$tooltip-font-size: 13px!default;
+$tooltip-color: #FFF!default;
+$tooltip-bg-color: #222!default;
+$tooltip-border-radius: 4px!default;
+$tooltip-offset: 8px!default;
+
+@mixin ui-tooltip() {
+
+  .ui-tooltip {
+    position: relative;
+    max-width: $tooltip-max-width;
+    padding: $tooltip-padding;
+    font-size: $tooltip-font-size;
+    color: $tooltip-color;
+    background-color: $tooltip-bg-color;
+    border-radius: $tooltip-border-radius;
+    margin: $tooltip-offset;
+    line-height: 1.5;
+  }
+
+  .ui-tooltip-panel {
+    pointer-events: none!important;
+  }
+
+}

@@ -1,0 +1,72 @@
+{
+  "name": "ngx-ui-components-project",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "npm run build:lib && npm run dev:docs",
+    "dev:lib": "ng build ngx-ui-components --watch",
+    "dev:docs": "ng serve demo",
+    "build": "npm run build:lib && npm run build:docs",
+    "build:lib": "ng build ngx-ui-components && npm run copy-assets",
+    "build:docs": "ng build demo",
+    "test": "npm run test:lib && npm run test:docs",
+    "test:lib": "ng test ngx-ui-components",
+    "test:lib-coverage": "ng test ngx-ui-components --code-coverage --watch=false",
+    "test:docs": "ng test demo",
+    "lint": "npm run lint:lib && npm run lint:docs",
+    "lint:lib": "ng lint ngx-ui-components",
+    "lint:docs": "ng lint demo",
+    "publish:docs": "npx angular-cli-ghpages --dir=./dist/demo",
+    "copy-assets": "gulp",
+    "generate-docs": "compodoc -p projects/ngx-ui-components/tsconfig.lib.json -d dist/docs -n ngx-ui-components -s -o",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~9.0.6",
+    "@angular/cdk": "^9.2.0",
+    "@angular/common": "~9.0.6",
+    "@angular/compiler": "~9.0.6",
+    "@angular/core": "~9.0.6",
+    "@angular/forms": "~9.0.6",
+    "@angular/platform-browser": "~9.0.6",
+    "@angular/platform-browser-dynamic": "~9.0.6",
+    "@angular/router": "~9.0.6",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.900.7",
+    "@angular-devkit/build-ng-packagr": "~0.900.7",
+    "@angular/cli": "~9.0.6",
+    "@angular/compiler-cli": "~9.0.6",
+    "@angular/language-service": "~9.0.6",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@compodoc/compodoc": "^1.1.11",
+    "@koolm/ngx-ui-components": "file:dist/ngx-ui-components",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.1.2",
+    "gulp": "^4.0.2",
+    "husky": "^4.2.5",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "ng-packagr": "^9.0.0",
+    "protractor": "~5.4.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.18.0",
+    "typescript": "~3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

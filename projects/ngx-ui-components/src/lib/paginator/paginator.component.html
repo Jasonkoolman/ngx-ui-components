@@ -1,0 +1,64 @@
+<ng-template #tplFirst><span aria-hidden="true">&laquo;</span></ng-template>
+<ng-template #tplPrev><span aria-hidden="true">&lsaquo;</span></ng-template>
+<ng-template #tplNext><span aria-hidden="true">&rsaquo;</span></ng-template>
+<ng-template #tplLast><span aria-hidden="true">&raquo;</span></ng-template>
+<ng-template #tplEllipsis>...</ng-template>
+
+<ul class="paginator-items" *ngIf="pageCount > 1">
+
+  <li class="paginator-item" *ngIf="showBoundaryLinks" [class.disabled]="prevDisabled">
+    <a href class="paginator-link" aria-label="First"
+       [attr.aria-disabled]="prevDisabled"
+       (click)="selectPage(1, $event)">
+      <ng-template [ngTemplateOutlet]="tplFirstRef || tplFirst"></ng-template>
+    </a>
+  </li>
+
+  <li class="paginator-item" [class.disabled]="prevDisabled">
+    <a href class="paginator-link" aria-label="Previous"
+       [attr.aria-disabled]="prevDisabled"
+       (click)="selectPage(page - 1, $event)">
+      <ng-template [ngTemplateOutlet]="tplPrevRef || tplPrev"></ng-template>
+    </a>
+  </li>
+
+  <li class="paginator-item disabled" *ngIf="hasPrevEllipsis">
+    <span class="paginator-link">
+      <ng-template [ngTemplateOutlet]="tplEllipsisRef || tplEllipsis"></ng-template>
+    </span>
+  </li>
+
+  <li class="paginator-item" *ngFor="let pageNumber of pageNumbers$ | async"
+      [class.active]="pageNumber === page"
+      [class.disabled]="disabled">
+    <a href class="paginator-link"
+       [attr.aria-current]="pageNumber === page ? 'page' : null"
+       [attr.aria-disabled]="disabled"
+       (click)="selectPage(pageNumber, $event)">
+      {{ pageNumber }}
+    </a>
+  </li>
+
+  <li class="paginator-item disabled" *ngIf="hasNextEllipsis">
+    <span class="paginator-link">
+      <ng-template [ngTemplateOutlet]="tplEllipsisRef || tplEllipsis"></ng-template>
+    </span>
+  </li>
+
+  <li class="paginator-item" [class.disabled]="nextDisabled">
+    <a href class="paginator-link" aria-label="Next"
+       (click)="selectPage(page + 1, $event)"
+       [attr.aria-disabled]="nextDisabled">
+      <ng-template [ngTemplateOutlet]="tplNextRef || tplNext"></ng-template>
+    </a>
+  </li>
+
+  <li class="paginator-item" *ngIf="showBoundaryLinks" [class.disabled]="nextDisabled">
+    <a href class="paginator-link" aria-label="Last"
+       (click)="selectPage(pageCount, $event)"
+       [attr.aria-disabled]="nextDisabled">
+      <ng-template [ngTemplateOutlet]="tplLastRef || tplLast"></ng-template>
+    </a>
+  </li>
+
+</ul>

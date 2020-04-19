@@ -1,0 +1,60 @@
+@import "~@angular/cdk/overlay/overlay";
+
+$dialog-z-index: 1000 !default;
+$dialog-padding: 24px !default;
+$dialog-bg-color: #FFF !default;
+$dialog-border-radius: 4px !default;
+$dialog-box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.2) !default;
+
+$dialog-backdrop-bg-color: rgba(0, 0, 0, 0.4) !default;
+$dialog-backdrop-animation-duration: 400ms !default;
+$dialog-backdrop-animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
+
+@mixin ui-dialog() {
+  @include cdk-overlay();
+
+  .ui-dialog {
+    flex: 1 1 auto;
+    outline: 0;
+    padding: $dialog-padding;
+    background-color: $dialog-bg-color;
+    border-radius: $dialog-border-radius;
+    box-shadow: $dialog-box-shadow;
+
+    .dialog-title {
+      margin: 0 0 16px;
+      display: block;
+    }
+
+    .dialog-content {
+      display: block;
+      margin: 0 #{-$dialog-padding};
+      padding: 0 $dialog-padding;
+      max-height: 70vh;
+      overflow: auto;
+    }
+
+    .dialog-footer {
+      padding: 8px 0;
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 52px;
+      align-items: center;
+      margin-bottom: -$dialog-padding;
+    }
+  }
+
+  .ui-dialog-backdrop {
+    background-color: $dialog-backdrop-bg-color;
+  }
+}
+
+// Angular CDK overrides
+$cdk-z-index-overlay-container: $dialog-z-index;
+$cdk-z-index-overlay: $dialog-z-index;
+$cdk-z-index-overlay-backdrop: $dialog-z-index;
+$backdrop-animation-duration: $dialog-backdrop-animation-duration;
+$backdrop-animation-timing-function: $dialog-backdrop-animation-timing-function;
+
+
+
