@@ -17,7 +17,7 @@
     "lint:docs": "ng lint demo",
     "publish:docs": "npx angular-cli-ghpages --dir=./dist/demo",
     "copy-assets": "gulp",
-    "generate-docs": "compodoc -p projects/ngx-ui-components/tsconfig.lib.json -d dist/docs -n ngx-ui-components -s -o",
+    "generate-docs": "compodoc -p projects/ngx-ui-components/tsconfig.lib.json -d projects/demo/src --disableCoverage --disableSourceCode --disablePrivate --disableProtected -e json",
     "e2e": "ng e2e"
   },
   "private": true,
