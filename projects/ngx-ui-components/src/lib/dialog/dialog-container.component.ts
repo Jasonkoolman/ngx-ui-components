@@ -66,7 +66,7 @@ export class DialogContainerComponent implements OnInit, OnDestroy {
   @HostBinding('attr.aria-labelledby') ariaLabelledBy = this.dialogConfig.ariaLabelledBy;
   @HostBinding('attr.aria-describedby') ariaDescribedBy = this.dialogConfig.ariaDescribedBy;
   @HostBinding('@.disabled') animationDisabled = this.useCssAnimation;
-  @HostBinding('@container') get animationBinding() { return this.animationState; }
+  @HostBinding('@dialog') get animationBinding() { return this.animationState; }
 
   constructor(
     @Inject(DOCUMENT) document: any,
@@ -77,8 +77,8 @@ export class DialogContainerComponent implements OnInit, OnDestroy {
     this.document = document as Document;
   }
 
-  @HostListener('@container.start', ['$event'])
-  @HostListener('@container.done', ['$event'])
+  @HostListener('@dialog.start', ['$event'])
+  @HostListener('@dialog.done', ['$event'])
   onAnimationEvent(event: AnimationEvent) {
     if (!this.useCssAnimation) {
       // TODO: Write bug report to Angular: events are invoked when animation is disabled
