@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { routes } from './app-routes';
 import { UidComponentsModule } from "./components/components.module";
+import { UiModule } from "./ui.module";
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { UidComponentsModule } from "./components/components.module";
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    UiModule,
     UidComponentsModule
   ],
   providers: [],

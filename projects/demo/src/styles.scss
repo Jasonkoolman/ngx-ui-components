@@ -1,26 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import '~@koolm/ngx-ui-components/lib/tooltip/tooltip.scss';
 
 body {
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+@include ui-tooltip();
+
 .ui-docs-header {
-  height: 84px;
-  padding: 0 16px;
+  height: 60px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   background: #FFF;
-  border-bottom: 1px solid #E4E4E4;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #e1e4e8;
 }
 
-.ui-docs-title {
+.ui-docs-header-logo {
+  width: 28px;
+  margin-right: 8px;
+}
+
+.ui-docs-header-title {
   h1 {
     margin: 0;
-    font-size: 20px;
+    color: #326bf9;;
+    font-size: 18px;
   }
-  span {
-    color: #777;
+}
+.ui-docs-header-icon {
+  margin-left: auto;
+
+  svg {
+    display: block;
+  }
+}
+
+.ui-docs-content {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 60px);
+}
+.ui-docs-sidebar {
+  width: 208px;
+  border-right: 1px solid #e1e4e8;
+  padding: 16px 0;
+}
+.ui-docs-page {
+  flex: 1 1 auto;
+  padding: 16px 24px;
+  background-color: #fafbfc;
+
+}
+.ui-docs-nav {
+  a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 24px;
+    transition: all 250ms ease;
+
+    &:hover, &:focus {
+      color: #326bf9;
+    }
+    &.active {
+      color: #326bf9;
+      background-color: #f1f8ff;
+    }
   }
 }
