@@ -47,7 +47,7 @@
     "@koolm/ngx-ui-components": "file:dist/ngx-ui-components",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.12.36",
     "codelyzer": "^5.1.2",
     "gulp": "^4.0.2",
     "husky": "^4.2.5",
@@ -60,6 +60,7 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "ng-packagr": "^9.0.0",
     "protractor": "~5.4.3",
+    "raw-loader": "^4.0.1",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
