@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { DialogPageComponent } from './pages/dialog/dialog.component';
+import { UidDialogComponent } from "./components/dialog/dialog.component";
 
 export const routes: Routes = [
-  { path: 'dialog', component: DialogPageComponent },
+  { path: 'dialog', component: UidDialogComponent },
 ];
