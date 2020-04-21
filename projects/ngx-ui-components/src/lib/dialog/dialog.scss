@@ -35,12 +35,10 @@ $dialog-backdrop-animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !de
     }
 
     .dialog-footer {
-      padding: 8px 0;
       display: flex;
       flex-wrap: wrap;
-      min-height: 52px;
       align-items: center;
-      margin-bottom: -$dialog-padding;
+      padding-top: $dialog-padding * 0.875;
     }
   }
 
