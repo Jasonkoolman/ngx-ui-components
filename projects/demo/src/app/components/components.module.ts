@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DialogDemoModule } from "./dialog/dialog.module";
 import { TooltipDemoModule } from "./tooltip/tooltip.module";
 import { UidSharedModule } from "../shared/shared.module";
+import { PaginatorDemoModule } from "./paginator/paginator.module";
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { UidSharedModule } from "../shared/shared.module";
     CommonModule,
     UidSharedModule,
     DialogDemoModule,
-    TooltipDemoModule
+    TooltipDemoModule,
+    PaginatorDemoModule
   ],
 })
 export class UidComponentsModule {}
