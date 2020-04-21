@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input, Type, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, Type, ViewEncapsulation } from '@angular/core';
+import { ComponentPortal, Portal } from "@angular/cdk/portal";
 
 interface DemoFile {
   name: string;
+  label?: string;
   source: string;
 }
 
@@ -13,15 +15,22 @@ interface DemoFile {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UidDemoComponent {
+export class UidDemoComponent<T> implements OnInit {
 
   @Input() id: string;
   @Input() title: string;
-  @Input() component: Type<any>;
+  @Input() description: string;
+  @Input() component: Type<T>;
   @Input() files: DemoFile[];
   @Input() showCode = false;
 
+  componentPortal: ComponentPortal<T> = null;
   selectedFile: DemoFile = null;
+
+  ngOnInit() {
+    this.componentPortal = new ComponentPortal(this.component);
+    this.selectedFile = this.files[0];
+  }
 
   selectFile(file: DemoFile) {
     this.selectedFile = file;

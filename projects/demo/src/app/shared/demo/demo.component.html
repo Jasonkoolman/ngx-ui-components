@@ -3,19 +3,27 @@
   <div class="uid-demo-header">
     <a [id]="id"></a>
     <h2>{{ title }}</h2>
+    <p *ngIf="description">{{ description }}</p>
   </div>
 
   <div class="uid-demo-toolbar">
-    <ul class="uid-demo-files">
-      <li *ngFor="let file of files; index as i" (click)="selectFile(file)">{{ file.name }}</li>
-    </ul>
-    <div class="uid-demo-code">
-      <pre *ngIf="selectedFile"><code>{{ selectedFile.source }}</code></pre>
+    <nav class="uid-demo-tabs">
+      <div class="uid-demo-tab" role="tab" tabindex="0"
+           *ngFor="let file of files; index as i"
+           [class.active]="selectedFile?.name === file.name"
+           (keydown.space)="selectFile(file)"
+           (keydown.enter)="selectFile(file)"
+           (click)="selectFile(file)">
+        {{ file.label || file.name }}
+      </div>
+    </nav>
+    <div class="uid-demo-code" *ngIf="selectedFile">
+      <pre><code [highlight]="selectedFile.source"></code></pre>
     </div>
   </div>
 
   <div class="uid-demo-view">
-    <ng-template [ngComponentOutlet]="component"></ng-template>
+    <ng-template [cdkPortalOutlet]="componentPortal"></ng-template>
   </div>
 
 </section>

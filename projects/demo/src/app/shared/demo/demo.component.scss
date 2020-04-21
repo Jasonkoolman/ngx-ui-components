@@ -1,0 +1,48 @@
+@import "../../../assets/scss/variables";
+
+.uid-demo-toolbar {
+  border: 1px solid $border-dark;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+
+.uid-demo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: 1px solid $border-light;
+}
+
+.uid-demo-tab {
+  display: block;
+  padding: 12px 20px;
+  margin-bottom: -1px;
+  font-size: 14px;
+  border-bottom: 1px solid $border-light;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-secondary
+  }
+
+  &.active {
+    color: $color-secondary;
+    background-color: $bg-light;
+    border-left: 1px solid $border-light;
+    border-right: 1px solid $border-light;
+    border-bottom-color: $bg-light;
+  }
+
+  &:first-child.active {
+    border-left: 0;
+  }
+}
+
+.uid-demo-view {
+  padding: 20px;
+  border: 1px solid $border-dark;
+  border-radius: 0 0 4px 4px;
+}
