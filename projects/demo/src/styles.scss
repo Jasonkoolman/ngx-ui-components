@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import "~@koolm/ngx-ui-components/lib/dialog/dialog";
+@import "~@koolm/ngx-ui-components/lib/paginator/paginator";
+@import "~@koolm/ngx-ui-components/lib/tooltip/tooltip";
 @import './assets/scss/variables';
 @import './assets/scss/highlight';
 
@@ -100,3 +103,8 @@ code {
     }
   }
 }
+
+// Components
+@include ui-dialog();
+@include ui-tooltip();
+@include ui-paginator();
