@@ -14,7 +14,7 @@ const MODULES = [
   DialogDemoModule,
   TooltipDemoModule,
   PaginatorDemoModule
-]
+];
 
 
 @NgModule({

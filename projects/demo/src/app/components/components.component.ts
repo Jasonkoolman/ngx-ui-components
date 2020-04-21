@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewEncapsulation } from "@angular/core";
+import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
+import { filter } from "rxjs/operators";
 import { UidComponent } from "./component.interface";
 
 @Component({
@@ -12,9 +13,18 @@ export class UidComponentsComponent {
   name: string;
   demos: any[];
 
-  constructor(private router: ActivatedRoute) {
-    const component = router.snapshot.data.component as UidComponent;
-    this.name = component.name;
-    this.demos = component.demos;
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private changeDetector: ChangeDetectorRef
+  ) {
+    router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe(() => {
+        const component = route.snapshot.data.component as UidComponent;
+        this.name = component.name;
+        this.demos = component.demos;
+        this.changeDetector.markForCheck();
+      })
   }
 }

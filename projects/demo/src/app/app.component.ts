@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { listAnimation } from "./shared/animations";
+import { UidComponentService } from "./components/component.service";
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,15 @@ import { listAnimation } from "./shared/animations";
   animations: [listAnimation]
 })
 export class AppComponent {
-  menuItems = [
-    { name: 'Dialog', path: '/dialog' },
-    { name: 'Tooltip', path: '/tooltip' },
-    { name: 'Paginator', path: '/paginator' }
-  ]
+
+  menuItems: {name: string, path: string}[] = [];
+
+  constructor(private componentService: UidComponentService) {
+    for (let [key, value] of componentService.components) {
+      this.menuItems.push({
+        name: value.name,
+        path: `components/${key}`,
+      })
+    }
+  }
 }
