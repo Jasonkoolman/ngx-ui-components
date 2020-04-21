@@ -24,7 +24,7 @@ export class TooltipDirective implements OnInit, OnDestroy {
   @Input() position: string = TooltipPosition.Bottom;
 
   /** The delay before showing the tooltip */
-  @Input() showDelay = 0;
+  @Input() showDelay = 50;
 
   /** The delay before hiding the tooltip */
   @Input() hideDelay = 0;
