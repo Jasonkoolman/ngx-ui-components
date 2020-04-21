@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { DialogDemoModule } from "./dialog/dialog.module";
 
 
@@ -8,6 +7,6 @@ import { DialogDemoModule } from "./dialog/dialog.module";
   imports: [
     CommonModule,
     DialogDemoModule
-  ]
+  ],
 })
 export class UidComponentsModule {}

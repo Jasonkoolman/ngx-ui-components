@@ -1,0 +1,17 @@
+.ui-dialog-enter {
+  animation: dialogEnter 400ms ease-in-out;
+}
+
+.ui-dialog-exit {
+  animation: dialogExit 200ms ease-in-out;
+}
+
+@keyframes dialogEnter {
+  from { opacity: 0; transform: translateY(50%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dialogExit {
+  from { opacity: 1; transform: scale(1); }
+  to {  opacity: 0; transform: scale(0); }
+}
