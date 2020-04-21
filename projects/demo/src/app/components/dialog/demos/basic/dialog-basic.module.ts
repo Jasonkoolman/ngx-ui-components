@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { DialogModule } from "@koolm/ngx-ui-components";
 import { UidBasicDialog, UidBasicComponent } from "./dialog-basic";
 
 
@@ -9,7 +9,7 @@ import { UidBasicDialog, UidBasicComponent } from "./dialog-basic";
     UidBasicComponent,
   ],
   imports: [
-    CommonModule
+    DialogModule
   ]
 })
 export class UidDialogBasicModule {}
