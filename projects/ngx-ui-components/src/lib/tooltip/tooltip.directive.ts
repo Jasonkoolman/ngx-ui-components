@@ -187,9 +187,12 @@ export class TooltipDirective implements OnInit, OnDestroy {
    */
   ngOnDestroy() {
     this.detach();
-    this.overlayRef.dispose();
     this.destroyed$.next();
     this.destroyed$.complete();
+
+    if (this.overlayRef) {
+      this.overlayRef.dispose();
+    }
   }
 
 }
