@@ -22,6 +22,7 @@ pre {
   overflow: auto;
   line-height: 1.5;
 }
+
 code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 14px;
@@ -97,6 +98,7 @@ code {
     &:hover, &:focus {
       color: $color-secondary;
     }
+
     &.active {
       color: $color-secondary;
       background-color: $bg-light-blue;

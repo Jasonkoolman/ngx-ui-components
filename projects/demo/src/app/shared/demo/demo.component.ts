@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, Type, ViewEncapsulation } from '@angular/core';
-import { ComponentPortal, Portal } from "@angular/cdk/portal";
+import { ComponentPortal } from '@angular/cdk/portal';
 
 interface DemoFile {
   name: string;

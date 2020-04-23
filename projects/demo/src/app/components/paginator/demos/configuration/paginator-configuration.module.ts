@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
-import { PaginatorModule } from "@koolm/ngx-ui-components";
-import { UidPaginatorConfiguration } from "./paginator-configuration";
+import { NgModule } from '@angular/core';
+import { PaginatorModule } from '@koolm/ngx-ui-components';
+import { UidPaginatorConfiguration } from './paginator-configuration';
 
 
 @NgModule({

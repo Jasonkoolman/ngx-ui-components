@@ -14,4 +14,4 @@ import { DialogModule, PaginatorModule, TooltipModule } from '@koolm/ngx-ui-comp
     PaginatorModule
   ]
 })
-export class UiModule { }
+export class UiModule {}

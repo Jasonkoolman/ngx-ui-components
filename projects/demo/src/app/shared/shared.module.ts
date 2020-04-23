@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UidDemoComponent } from './demo/demo.component';
-import { HIGHLIGHT_OPTIONS, HighlightModule } from "ngx-highlightjs";
-import { PortalModule } from "@angular/cdk/portal";
-
+import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
+import { PortalModule } from '@angular/cdk/portal';
 
 
 @NgModule({
@@ -31,4 +30,4 @@ import { PortalModule } from "@angular/cdk/portal";
     }
   ],
 })
-export class UidSharedModule { }
+export class UidSharedModule {}

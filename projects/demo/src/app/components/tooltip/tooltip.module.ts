@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UidSharedModule } from "../../shared/shared.module";
-import { UidTooltipBasicModule } from "./demos/basic/tooltip-basic.module";
-import { UidComponentService } from "../component.service";
-import { UidTooltipBasic } from "./demos/basic/tooltip-basic";
+import { UidSharedModule } from '../../shared/shared.module';
+import { UidTooltipBasicModule } from './demos/basic/tooltip-basic.module';
+import { UidComponentService } from '../component.service';
+import { UidTooltipBasic } from './demos/basic/tooltip-basic';
 
 const DEMOS = [
   {

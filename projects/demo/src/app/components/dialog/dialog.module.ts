@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UidDialogBasicModule } from "./demos/basic/dialog-basic.module";
-import { UidDialogCustomAnimationsModule } from "./demos/custom-animations/dialog-custom-animations.module";
-import { UidSharedModule } from "../../shared/shared.module";
-import { UidBasicComponent } from "./demos/basic/dialog-basic";
-import { UidCustomAnimationComponent } from "./demos/custom-animations/dialog-custom-animations";
-import { UidComponentService } from "../component.service";
+import { UidDialogBasicModule } from './demos/basic/dialog-basic.module';
+import { UidDialogCustomAnimationsModule } from './demos/custom-animations/dialog-custom-animations.module';
+import { UidSharedModule } from '../../shared/shared.module';
+import { UidBasicComponent } from './demos/basic/dialog-basic';
+import { UidCustomAnimationComponent } from './demos/custom-animations/dialog-custom-animations';
+import { UidComponentService } from '../component.service';
 
 const DEMOS = [
   {

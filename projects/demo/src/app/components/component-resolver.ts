@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { EMPTY, Observable, of } from 'rxjs';
-import { UidComponentService } from "./component.service";
-import { UidComponent } from "./component.interface";
+import { UidComponentService } from './component.service';
+import { UidComponent } from './component.interface';
 
 @Injectable({
   providedIn: 'root'

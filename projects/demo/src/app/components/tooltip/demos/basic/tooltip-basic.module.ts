@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
-import { TooltipModule } from "@koolm/ngx-ui-components";
-import { UidTooltipBasic } from "./tooltip-basic";
+import { NgModule } from '@angular/core';
+import { TooltipModule } from '@koolm/ngx-ui-components';
+import { UidTooltipBasic } from './tooltip-basic';
 
 
 @NgModule({

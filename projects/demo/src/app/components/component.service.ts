@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { UidComponent } from "./component.interface";
+import { Injectable } from '@angular/core';
+import { UidComponent } from './component.interface';
 
 @Injectable({
   providedIn: 'root'

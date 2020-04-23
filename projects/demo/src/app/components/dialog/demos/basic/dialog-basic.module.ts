@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
-import { DialogModule } from "@koolm/ngx-ui-components";
-import { UidBasicDialog, UidBasicComponent } from "./dialog-basic";
+import { NgModule } from '@angular/core';
+import { DialogModule } from '@koolm/ngx-ui-components';
+import { UidBasicComponent, UidBasicDialog } from './dialog-basic';
 
 
 @NgModule({

@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
-import { DialogModule } from "@koolm/ngx-ui-components";
-import { UidCustomAnimationComponent, UidCustomAnimationDialog } from "./dialog-custom-animations";
+import { NgModule } from '@angular/core';
+import { DialogModule } from '@koolm/ngx-ui-components';
+import { UidCustomAnimationComponent, UidCustomAnimationDialog } from './dialog-custom-animations';
 
 
 @NgModule({

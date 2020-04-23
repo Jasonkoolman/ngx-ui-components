@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UidSharedModule } from "../../shared/shared.module";
-import { UidPaginatorBasicModule } from "./demos/basic/paginator-basic.module";
-import { UidPaginatorConfigurationModule } from "./demos/configuration/paginator-configuration.module";
-import { UidPaginatorBasic } from "./demos/basic/paginator-basic";
-import { UidPaginatorConfiguration } from "./demos/configuration/paginator-configuration";
-import { UidComponentService } from "../component.service";
+import { UidSharedModule } from '../../shared/shared.module';
+import { UidPaginatorBasicModule } from './demos/basic/paginator-basic.module';
+import { UidPaginatorConfigurationModule } from './demos/configuration/paginator-configuration.module';
+import { UidPaginatorBasic } from './demos/basic/paginator-basic';
+import { UidPaginatorConfiguration } from './demos/configuration/paginator-configuration';
+import { UidComponentService } from '../component.service';
 
 const DEMOS = [
   {
