@@ -37,4 +37,4 @@ import {
     PortalModule
   ]
 })
-export class DialogModule { }
+export class DialogModule {}

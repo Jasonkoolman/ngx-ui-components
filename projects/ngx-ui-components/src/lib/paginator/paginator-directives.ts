@@ -1,4 +1,4 @@
-import { Directive } from "@angular/core";
+import { Directive } from '@angular/core';
 
 /**
  * A directive to match the 'ellipsis' link template.

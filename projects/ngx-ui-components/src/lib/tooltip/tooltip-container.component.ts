@@ -1,18 +1,18 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
   HostBinding,
   HostListener,
-  ChangeDetectionStrategy,
   OnInit
 } from '@angular/core';
-import { AbstractAnimationEvent, AnimationPhase, AnimationState } from "../core/animations";
-import { TooltipPosition } from "./tooltip.enum";
-import { tooltipAnimation } from "./tooltip-animation";
-import { classNames } from "../core/utils";
-import { Observable } from "rxjs";
-import { filter, first, mapTo, timeout } from "rxjs/operators";
+import { AbstractAnimationEvent, AnimationPhase, AnimationState } from '../core/animations';
+import { TooltipPosition } from './tooltip.enum';
+import { tooltipAnimation } from './tooltip-animation';
+import { classNames } from '../core/utils';
+import { Observable } from 'rxjs';
+import { filter, first, mapTo, timeout } from 'rxjs/operators';
 
 // TODO: Support auto positioning
 // TODO: Support useCssAnimations?
@@ -43,6 +43,7 @@ export class TooltipContainerComponent implements OnInit {
   readonly animationStateChanged$ = new EventEmitter<AbstractAnimationEvent>();
 
   @HostBinding('attr.role') attrRole = 'tooltip';
+
   @HostBinding('@tooltip') get animationBiding() { return this.animationState; }
 
   constructor(private elementRef: ElementRef) {}

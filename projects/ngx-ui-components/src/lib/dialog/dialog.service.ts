@@ -24,7 +24,7 @@ export class DialogService {
    * @returns reference   Reference of the newly-opened dialog.
    */
   open<T, D = any>(component: ComponentType<T>, config?: DialogConfig<D>): DialogRef {
-    const dialogConfig = { ...new DialogConfig(), ...config };
+    const dialogConfig = {...new DialogConfig(), ...config};
     const overlayRef = this.createOverlay(dialogConfig);
     const dialogContainer = this.attachContainer(overlayRef, dialogConfig);
     const dialogRef = this.attachContent(component, dialogContainer, overlayRef, dialogConfig);

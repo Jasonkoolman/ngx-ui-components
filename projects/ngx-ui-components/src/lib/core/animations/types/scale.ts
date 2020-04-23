@@ -1,4 +1,4 @@
-import { animate, animation, keyframes, style, AnimationReferenceMetadata } from '@angular/animations';
+import { animate, animation, AnimationReferenceMetadata, keyframes, style } from '@angular/animations';
 
 const DEFAULT_PARAMS = {
   duration: 280,
@@ -40,7 +40,7 @@ export function scaleAnimation(
         style(scaleEnd(state, endScale))
       ])
     ),
-    { params: DEFAULT_PARAMS }
+    {params: DEFAULT_PARAMS}
   );
 }
 
@@ -52,7 +52,7 @@ function scaleStart(state, scale, transformOrigin?) {
     offset: 0,
     opacity: state === 'enter' ? 0 : 1,
     transform: `scale(${scale})`,
-    ...(transformOrigin && { transformOrigin }),
+    ...(transformOrigin && {transformOrigin}),
   };
 }
 

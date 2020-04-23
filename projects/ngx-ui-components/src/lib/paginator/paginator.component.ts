@@ -1,17 +1,20 @@
 import {
   ChangeDetectionStrategy,
-  Component, ContentChild,
+  Component,
+  ContentChild,
   EventEmitter,
   HostBinding,
   Input,
   OnChanges,
   OnDestroy,
-  Output, SimpleChanges, TemplateRef
+  Output,
+  SimpleChanges,
+  TemplateRef
 } from '@angular/core';
-import { Observable, range, Subject } from "rxjs";
-import { filter, map, takeUntil, toArray } from "rxjs/operators";
-import { PageEvent } from "./paginator.interface";
-import { PaginatorFirst, PaginatorPrev, PaginatorNext, PaginatorLast, PaginatorEllipsis } from "./paginator-directives";
+import { Observable, range, Subject } from 'rxjs';
+import { filter, map, takeUntil, toArray } from 'rxjs/operators';
+import { PageEvent } from './paginator.interface';
+import { PaginatorEllipsis, PaginatorFirst, PaginatorLast, PaginatorNext, PaginatorPrev } from './paginator-directives';
 
 @Component({
   selector: 'ui-paginator',
@@ -58,11 +61,11 @@ export class PaginatorComponent implements OnChanges, OnDestroy {
   @HostBinding('class') classes = 'ui-paginator';
   @HostBinding('attr.role') attrRole = 'navigation';
 
-  @ContentChild(PaginatorFirst, { read: TemplateRef }) tplFirstRef;
-  @ContentChild(PaginatorPrev, { read: TemplateRef }) tplPrevRef;
-  @ContentChild(PaginatorNext, { read: TemplateRef }) tplNextRef;
-  @ContentChild(PaginatorLast, { read: TemplateRef }) tplLastRef;
-  @ContentChild(PaginatorEllipsis, { read: TemplateRef }) tplEllipsisRef;
+  @ContentChild(PaginatorFirst, {read: TemplateRef}) tplFirstRef;
+  @ContentChild(PaginatorPrev, {read: TemplateRef}) tplPrevRef;
+  @ContentChild(PaginatorNext, {read: TemplateRef}) tplNextRef;
+  @ContentChild(PaginatorLast, {read: TemplateRef}) tplLastRef;
+  @ContentChild(PaginatorEllipsis, {read: TemplateRef}) tplEllipsisRef;
 
   constructor() {}
 

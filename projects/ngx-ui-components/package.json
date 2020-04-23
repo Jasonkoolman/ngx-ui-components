@@ -4,10 +4,21 @@
   "version": "0.1.0",
   "author": "Jason Koolman <jason.koolman@hotmail.com>",
   "keywords": [
-    "angular", "components",
-    "ngx-ui", "ngx-ui-components", "ui", "ux", "cdk",
-    "user experience", "user interface", "usability", "accessibility",
-    "reusable", "flexible", "lightweight", "minimalistic"
+    "angular",
+    "components",
+    "ngx-ui",
+    "ngx-ui-components",
+    "ui",
+    "ux",
+    "cdk",
+    "user experience",
+    "user interface",
+    "usability",
+    "accessibility",
+    "reusable",
+    "flexible",
+    "lightweight",
+    "minimalistic"
   ],
   "peerDependencies": {
     "@angular/common": ">=8.0.0",

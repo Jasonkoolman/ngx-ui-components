@@ -1,4 +1,4 @@
-import { animate, animation, keyframes, style, AnimationReferenceMetadata } from '@angular/animations';
+import { animate, animation, AnimationReferenceMetadata, keyframes, style } from '@angular/animations';
 
 const DEFAULT_PARAMS = {
   duration: 280,
@@ -42,7 +42,7 @@ export function fadeAnimation(
         style(fadeEnd(state, endX, endY))
       ])
     ),
-    { params: DEFAULT_PARAMS }
+    {params: DEFAULT_PARAMS}
   );
 }
 

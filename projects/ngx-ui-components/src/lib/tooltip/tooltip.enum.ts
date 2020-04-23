@@ -10,7 +10,7 @@ export enum TooltipPosition {
 /**
  * Connected position relative to the target element.
  */
-export const ConnectedPositions: {[key: string]: ConnectedPosition} = {
+export const ConnectedPositions: { [key: string]: ConnectedPosition } = {
   [TooltipPosition.Top]: {
     originX: 'center',
     originY: 'top',

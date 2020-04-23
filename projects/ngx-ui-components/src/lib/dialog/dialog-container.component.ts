@@ -12,9 +12,9 @@ import {
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { CdkPortalOutlet, ComponentPortal } from '@angular/cdk/portal';
-import { ConfigurableFocusTrapFactory, ConfigurableFocusTrap } from '@angular/cdk/a11y';
+import { ConfigurableFocusTrap, ConfigurableFocusTrapFactory } from '@angular/cdk/a11y';
 import { AnimationEvent } from '@angular/animations';
-import { Observable, Subject, fromEvent, merge, race, timer } from 'rxjs';
+import { fromEvent, merge, Observable, race, Subject, timer } from 'rxjs';
 import { first, mapTo, takeUntil, tap } from 'rxjs/operators';
 
 import { AbstractAnimationEvent, AnimationPhase, AnimationState, getAnimationEvents } from '../core/animations';
@@ -66,6 +66,7 @@ export class DialogContainerComponent implements OnInit, OnDestroy {
   @HostBinding('attr.aria-labelledby') ariaLabelledBy = this.dialogConfig.ariaLabelledBy;
   @HostBinding('attr.aria-describedby') ariaDescribedBy = this.dialogConfig.ariaDescribedBy;
   @HostBinding('@.disabled') animationDisabled = this.useCssAnimation;
+
   @HostBinding('@dialog') get animationBinding() { return this.animationState; }
 
   constructor(
@@ -126,7 +127,7 @@ export class DialogContainerComponent implements OnInit, OnDestroy {
     return race($event,
       timer(animationTimeout).pipe(
         tap(() => console.warn('Dialog animation event did not fire on time - mocking the event.')),
-        mapTo({ phaseName, toState }),
+        mapTo({phaseName, toState}),
       )
     ).pipe(
       takeUntil(this.destroyed$)

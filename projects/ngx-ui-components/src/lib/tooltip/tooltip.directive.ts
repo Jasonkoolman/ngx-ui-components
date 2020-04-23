@@ -1,11 +1,11 @@
 import { Directive, ElementRef, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
-import { ComponentPortal } from "@angular/cdk/portal";
+import { ComponentPortal } from '@angular/cdk/portal';
 
-import { TooltipPosition, ConnectedPositions } from './tooltip.enum';
-import { TooltipContainerComponent } from "./tooltip-container.component";
-import { Subject } from "rxjs";
-import { takeUntil } from "rxjs/operators";
+import { ConnectedPositions, TooltipPosition } from './tooltip.enum';
+import { TooltipContainerComponent } from './tooltip-container.component';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 
 // TODO: Support fallback position (left <-> right, top <-> bottom)

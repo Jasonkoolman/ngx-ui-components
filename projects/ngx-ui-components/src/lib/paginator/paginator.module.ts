@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginatorComponent } from './paginator.component';
-import { PaginatorFirst, PaginatorLast, PaginatorNext, PaginatorPrev, PaginatorEllipsis } from "./paginator-directives";
+import { PaginatorEllipsis, PaginatorFirst, PaginatorLast, PaginatorNext, PaginatorPrev } from './paginator-directives';
 
 
 @NgModule({

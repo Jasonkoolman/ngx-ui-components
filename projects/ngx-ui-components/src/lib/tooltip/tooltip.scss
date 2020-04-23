@@ -1,12 +1,12 @@
 @import "~@angular/cdk/overlay/overlay";
 
-$tooltip-max-width: 260px!default;
-$tooltip-padding: 3px 10px!default;
-$tooltip-font-size: 14px!default;
-$tooltip-color: #FFF!default;
-$tooltip-bg-color: #222!default;
-$tooltip-border-radius: 4px!default;
-$tooltip-offset: 8px!default;
+$tooltip-max-width: 260px !default;
+$tooltip-padding: 3px 10px !default;
+$tooltip-font-size: 14px !default;
+$tooltip-color: #FFF !default;
+$tooltip-bg-color: #222 !default;
+$tooltip-border-radius: 4px !default;
+$tooltip-offset: 8px !default;
 
 @mixin ui-tooltip() {
   @include cdk-overlay();
@@ -24,7 +24,7 @@ $tooltip-offset: 8px!default;
   }
 
   .ui-tooltip-panel {
-    pointer-events: none!important;
+    pointer-events: none !important;
   }
 
 }

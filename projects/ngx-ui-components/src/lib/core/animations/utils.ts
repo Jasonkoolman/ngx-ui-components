@@ -45,7 +45,7 @@ export function getAnimationEvents(): AnimationEventName | null {
 /**
  * Get the supported property name.
  */
-function getSupported(props: {[key: string]: any}): any | null {
+function getSupported(props: { [key: string]: any }): any | null {
   for (const key in props) {
     if (styleDeclaration[key] !== undefined) {
       return props[key];
