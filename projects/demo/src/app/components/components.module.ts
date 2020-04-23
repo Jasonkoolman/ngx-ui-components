@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DialogDemoModule } from './dialog/dialog.module';
-import { TooltipDemoModule } from './tooltip/tooltip.module';
-import { UidSharedModule } from '../shared/shared.module';
-import { PaginatorDemoModule } from './paginator/paginator.module';
 import { RouterModule } from '@angular/router';
-import { routes } from './components-routes';
+
+import { UidSharedModule } from '../shared/shared.module';
+import { UidDialogModule } from './dialog/dialog.module';
+import { UidTooltipModule } from './tooltip/tooltip.module';
+import { UidPaginatorModule } from './paginator/paginator.module';
+
 import { UidComponentsComponent } from './components.component';
 import { UidComponentService } from './component.service';
 import { UidComponentResolver } from './component-resolver';
+import { routes } from './component-routes';
 
 const MODULES = [
-  DialogDemoModule,
-  TooltipDemoModule,
-  PaginatorDemoModule
+  UidDialogModule,
+  UidTooltipModule,
+  UidPaginatorModule
 ];
 
 

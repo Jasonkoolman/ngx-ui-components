@@ -55,7 +55,7 @@ const DEMOS = [
     UidPaginatorConfigurationModule
   ]
 })
-export class PaginatorDemoModule {
+export class UidPaginatorModule {
 
   constructor(private componentService: UidComponentService) {
     this.componentService.addComponent('paginator', {

@@ -34,7 +34,7 @@ const DEMOS = [
     UidTooltipBasicModule
   ]
 })
-export class TooltipDemoModule {
+export class UidTooltipModule {
 
   constructor(private componentService: UidComponentService) {
     this.componentService.addComponent('tooltip', {

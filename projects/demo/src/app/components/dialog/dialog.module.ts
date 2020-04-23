@@ -78,7 +78,7 @@ const DEMOS = [
     UidDialogCustomAnimationsModule,
   ]
 })
-export class DialogDemoModule {
+export class UidDialogModule {
 
   constructor(private componentService: UidComponentService) {
     this.componentService.addComponent('dialog', {
