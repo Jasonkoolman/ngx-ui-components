@@ -1,5 +1,6 @@
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ContentChild,
   EventEmitter,
@@ -23,7 +24,14 @@ import { PaginatorEllipsis, PaginatorFirst, PaginatorLast, PaginatorNext, Pagina
 })
 export class PaginatorComponent implements OnChanges, OnDestroy {
   /** The current page number */
-  @Input() page = 1;
+  @Input()
+  get page(): number { return this._page; }
+  set page(value: number) {
+    this._page = Math.max(value, 1);
+    this.changeDetector.markForCheck();
+  }
+
+  private _page = 1;
 
   /** The total numbers of items to be paged */
   @Input() length: number;
@@ -32,7 +40,7 @@ export class PaginatorComponent implements OnChanges, OnDestroy {
   @Input() perPage = 10;
 
   /** The range size of items to display */
-  @Input() range = 2;
+  @Input() range = 3;
 
   /** Whether to disable the paginator */
   @Input() disabled = false;
@@ -67,7 +75,7 @@ export class PaginatorComponent implements OnChanges, OnDestroy {
   @ContentChild(PaginatorLast, {read: TemplateRef}) tplLastRef;
   @ContentChild(PaginatorEllipsis, {read: TemplateRef}) tplEllipsisRef;
 
-  constructor() {}
+  constructor(private changeDetector: ChangeDetectorRef) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     this.getPages();
