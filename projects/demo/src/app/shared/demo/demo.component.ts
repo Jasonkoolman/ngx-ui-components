@@ -15,7 +15,7 @@ interface DemoFile {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UidDemoComponent<T> implements OnInit {
+export class UidDemoComponent<T = any> implements OnInit {
 
   @Input() id: string;
   @Input() title: string;

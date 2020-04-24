@@ -49,4 +49,8 @@
   padding: 20px;
   border: 1px solid $border-dark;
   border-radius: 0 0 4px 4px;
+
+  span + span {
+    margin-left: 16px;
+  }
 }
