@@ -30,9 +30,9 @@
 
   <li class="paginator-item" *ngFor="let pageNumber of pageNumbers$ | async"
       [class.active]="pageNumber === page"
-      [class.disabled]="disabled">
+      [class.disabled]="disabled"
+      [attr.aria-current]="pageNumber === page ? 'page' : null">
     <a href class="paginator-link"
-       [attr.aria-current]="pageNumber === page ? 'page' : null"
        [attr.aria-disabled]="disabled"
        (click)="selectPage(pageNumber, $event)">
       {{ pageNumber }}
