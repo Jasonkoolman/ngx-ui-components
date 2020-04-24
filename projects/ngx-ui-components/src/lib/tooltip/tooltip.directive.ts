@@ -54,10 +54,10 @@ export class TooltipDirective implements OnInit, OnDestroy {
   private connectedPosition: ConnectedPosition;
 
   /** Timeout id for the show delay */
-  private showTimeout: number | null;
+  private showTimeout: any | null;
 
   /** Timeout id for the hide delay */
-  private hideTimeout: number | null;
+  private hideTimeout: any | null;
 
   constructor(
     private overlay: Overlay,
