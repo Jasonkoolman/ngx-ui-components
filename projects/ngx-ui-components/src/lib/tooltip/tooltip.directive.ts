@@ -33,10 +33,10 @@ export class TooltipDirective implements OnInit, OnDestroy {
   @Input() disabled: boolean;
 
   /** Emits when the tooltip is done showing */
-  @Output() tooltipShown = new EventEmitter<void>();
+  @Output() shown = new EventEmitter<void>();
 
   /** Emits when the tooltip is done hiding */
-  @Output() tooltipHidden = new EventEmitter<void>();
+  @Output() hidden = new EventEmitter<void>();
 
   /** Subject that notifies when the directive is destroyed */
   private destroyed$ = new Subject<void>();
@@ -95,7 +95,7 @@ export class TooltipDirective implements OnInit, OnDestroy {
       this.componentInstance
         .afterShown()
         .pipe(takeUntil(this.destroyed$))
-        .subscribe(() => this.tooltipShown.emit());
+        .subscribe(() => this.shown.emit());
 
       this.componentInstance.show();
       this.showTimeout = null;
@@ -121,7 +121,7 @@ export class TooltipDirective implements OnInit, OnDestroy {
         .pipe(takeUntil(this.destroyed$))
         .subscribe(() => {
           this.detach();
-          this.tooltipHidden.emit();
+          this.hidden.emit();
         });
 
       this.componentInstance.hide();
