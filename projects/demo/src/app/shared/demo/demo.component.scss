@@ -50,6 +50,9 @@
   border: 1px solid $border-dark;
   border-radius: 0 0 4px 4px;
 
+  button {
+    padding: 4px 8px;
+  }
   span + span {
     margin-left: 16px;
   }
