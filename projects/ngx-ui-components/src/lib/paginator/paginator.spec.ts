@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { createGenericTestComponent } from '../core/testing/common';
 import { PaginatorComponent } from './paginator.component';
 import { PaginatorModule } from './paginator.module';
+import { PageEvent } from './paginator.interface';
 
 const Selectors = {
   ul: '.paginator-items',
@@ -14,7 +15,7 @@ function createTestHost(template: string): ComponentFixture<TestComponent> {
   return createGenericTestComponent(TestComponent, template)
 }
 
-function expectItems(element: HTMLElement, expectedItems: string[]): void {
+function expectItems(element: HTMLElement, expectedItems: string[], ellipsis = '...'): void {
   const items = element.querySelectorAll(Selectors.li);
 
   expect(items.length).toEqual(expectedItems.length);
@@ -25,7 +26,9 @@ function expectItems(element: HTMLElement, expectedItems: string[]): void {
     const state = item.charAt(0);
     const textContent = normalizeText(items[i].textContent);
 
-    if (state === '+') {
+    if (textContent === ellipsis) {
+      expect(items[i]).toHaveCssClass('disabled');
+    } else if (state === '+') {
       expect(items[i]).toHaveCssClass('active');
       expect(items[i]).not.toHaveCssClass('disabled');
       expect(items[i].getAttribute('aria-current')).toBe('page');
@@ -158,6 +161,52 @@ describe('Paginator', () => {
       expect(fixture.componentInstance.paginate).toHaveBeenCalled();
       pages[3].querySelector('a').click();
       expect(fixture.componentInstance.paginate).toHaveBeenCalled();
+    });
+
+    it('should render ellipsis', () => {
+      const html = '<ui-paginator [page]="page" [length]="length" [showEllipsis]="true"></ui-paginator>';
+      const fixture = createTestHost(html);
+
+      expectItems(fixture.nativeElement, ['-‹', '+1', '2', '3', '4', '5', '6', '7', '...', '›']);
+
+      fixture.componentInstance.page = 5;
+      fixture.detectChanges();
+      expectItems(fixture.nativeElement, ['‹', '...', '2', '3', '4', '+5', '6', '7', '8', '...', '›']);
+
+      fixture.componentInstance.page = 9;
+      fixture.detectChanges();
+      expectItems(fixture.nativeElement, ['‹', '...', '4', '5', '6', '7', '8', '+9', '10', '›']);
+    });
+
+    it('should render boundary links', () => {
+      const html = '<ui-paginator [page]="page" [length]="length" [showBoundaryLinks]="true"></ui-paginator>';
+      const fixture = createTestHost(html);
+
+      expectItems(fixture.nativeElement, ['-«', '-‹', '+1', '2', '3', '4', '5', '6', '7', '›', '»']);
+
+      fixture.componentInstance.page = 5;
+      fixture.detectChanges();
+      expectItems(fixture.nativeElement, ['«', '‹', '2', '3', '4', '+5', '6', '7', '8', '›', '»']);
+
+      fixture.componentInstance.page = 10;
+      fixture.detectChanges();
+      expectItems(fixture.nativeElement, ['«', '‹', '4', '5', '6', '7', '8', '9', '+10', '-›', '-»']);
+    });
+
+    it('should render custom templates', () => {
+      const fixture = createTestHost(`
+        <ui-paginator [page]="page" [length]="length" [showBoundaryLinks]="true" [showEllipsis]="true">
+          <ng-template ui-paginator-ellipsis>.</ng-template>
+          <ng-template ui-paginator-first>First</ng-template>
+          <ng-template ui-paginator-prev>Prev</ng-template>
+          <ng-template ui-paginator-next>Next</ng-template>
+          <ng-template ui-paginator-last>Last</ng-template>
+        </ui-paginator>
+      `);
+
+      fixture.componentInstance.page = 5;
+      fixture.detectChanges();
+      expectItems(fixture.nativeElement, ['First', 'Prev', '.', '2', '3', '4', '+5', '6', '7', '8', '.', 'Next', 'Last'], '.');
     });
   });
 
