@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
 import { createGenericTestComponent } from '../core/testing/common';
 import { PaginatorComponent } from './paginator.component';
 import { PaginatorModule } from './paginator.module';
-import { PageEvent } from './paginator.interface';
 
 const Selectors = {
   ul: '.paginator-items',
