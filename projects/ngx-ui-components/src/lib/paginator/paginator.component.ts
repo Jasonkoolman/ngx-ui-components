@@ -30,7 +30,6 @@ export class PaginatorComponent implements OnChanges, OnDestroy {
     this._page = Math.max(value, 1);
     this.changeDetector.markForCheck();
   }
-
   private _page = 1;
 
   /** The total numbers of items to be paged */
@@ -66,8 +65,8 @@ export class PaginatorComponent implements OnChanges, OnDestroy {
   /** Observable containing the page numbers to be displayed */
   pageNumbers$: Observable<number[]>;
 
-  @HostBinding('class') classes = 'ui-paginator';
-  @HostBinding('attr.role') attrRole = 'navigation';
+  @HostBinding() class = 'ui-paginator';
+  @HostBinding('attr.role') role = 'navigation';
 
   @ContentChild(PaginatorFirst, {read: TemplateRef}) tplFirstRef;
   @ContentChild(PaginatorPrev, {read: TemplateRef}) tplPrevRef;
