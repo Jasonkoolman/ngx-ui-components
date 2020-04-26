@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { UidSharedModule } from '../../shared/shared.module';
 import { UidPaginatorBasicModule } from './demos/basic/paginator-basic.module';
 import { UidPaginatorConfigurationModule } from './demos/configuration/paginator-configuration.module';
+import { UidPaginatorTemplatesModule } from './demos/templates/paginator-templates.module';
 import { UidPaginatorBasic } from './demos/basic/paginator-basic';
 import { UidPaginatorConfiguration } from './demos/configuration/paginator-configuration';
+import { UidPaginatorTemplates } from './demos/templates/paginator-templates';
 import { UidComponentService } from '../component.service';
 
 const DEMOS = [
@@ -12,15 +14,14 @@ const DEMOS = [
     id: 'basic',
     title: 'Basic paginator',
     component: UidPaginatorBasic,
-    description: 'Looks liek a charm',
     files: [
       {
-        name: 'basic-paginator.html',
+        name: 'paginator-basic.html',
         label: 'HTML',
         source: require('!!raw-loader!./demos/basic/paginator-basic.html').default
       },
       {
-        name: 'basic-dialog.ts',
+        name: 'paginator-basic.ts',
         label: 'TS',
         source: require('!!raw-loader!./demos/basic/paginator-basic.ts').default
       }
@@ -30,17 +31,33 @@ const DEMOS = [
     id: 'configuration',
     title: 'Configuring the paginator',
     component: UidPaginatorConfiguration,
-    description: 'teasdsds',
     files: [
       {
-        name: 'configuration-paginator.html',
+        name: 'paginator-configuration.html',
         label: 'HTML',
         source: require('!!raw-loader!./demos/configuration/paginator-configuration.html').default
       },
       {
-        name: 'configuration-dialog.ts',
+        name: 'paginator-configuration.ts',
         label: 'TS',
         source: require('!!raw-loader!./demos/configuration/paginator-configuration.ts').default
+      }
+    ]
+  },
+  {
+    id: 'templates',
+    title: 'Overriding templates',
+    component: UidPaginatorTemplates,
+    files: [
+      {
+        name: 'paginator-templates.html',
+        label: 'HTML',
+        source: require('!!raw-loader!./demos/templates/paginator-templates.html').default
+      },
+      {
+        name: 'paginator-templates.ts',
+        label: 'TS',
+        source: require('!!raw-loader!./demos/templates/paginator-templates.ts').default
       }
     ]
   }
@@ -52,7 +69,8 @@ const DEMOS = [
     CommonModule,
     UidSharedModule,
     UidPaginatorBasicModule,
-    UidPaginatorConfigurationModule
+    UidPaginatorConfigurationModule,
+    UidPaginatorTemplatesModule
   ]
 })
 export class UidPaginatorModule {
