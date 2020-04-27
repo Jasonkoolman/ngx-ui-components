@@ -18,6 +18,7 @@ export const scaleOutDown = scaleAnimation('leave', 1, 0.6, 'top');
 export const scaleOutLeft = scaleAnimation('leave', 1, 0.6, 'right');
 export const scaleOutRight = scaleAnimation('leave', 1, 0.6, 'left');
 
+
 /**
  * Produces a reusable scale animation.
  *
@@ -47,7 +48,7 @@ export function scaleAnimation(
 /**
  * Gets the starting styles for the scale animation.
  */
-function scaleStart(state, scale, transformOrigin?) {
+export function scaleStart(state, scale, transformOrigin?) {
   return {
     offset: 0,
     opacity: state === 'enter' ? 0 : 1,
@@ -59,7 +60,7 @@ function scaleStart(state, scale, transformOrigin?) {
 /**
  * Gets the ending styles for the scale animation.
  */
-function scaleEnd(state, scale) {
+export function scaleEnd(state, scale) {
   return {
     offset: 1,
     opacity: state === 'enter' ? 1 : 0,

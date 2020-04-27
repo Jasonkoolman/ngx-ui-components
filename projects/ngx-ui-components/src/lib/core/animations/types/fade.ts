@@ -49,7 +49,7 @@ export function fadeAnimation(
 /**
  * Gets the starting styles for the fade animation.
  */
-function fadeStart(state, x, y) {
+export function fadeStart(state, x, y) {
   return {
     offset: 0,
     opacity: state === 'enter' ? 0 : 1,
@@ -60,7 +60,7 @@ function fadeStart(state, x, y) {
 /**
  * Gets the ending styles for the fade animation.
  */
-function fadeEnd(state, x, y) {
+export function fadeEnd(state, x, y) {
   return {
     offset: 1,
     opacity: state === 'enter' ? 1 : 0,
