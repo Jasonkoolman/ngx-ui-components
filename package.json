@@ -15,6 +15,7 @@
     "lint": "npm run lint:lib && npm run lint:docs",
     "lint:lib": "ng lint ngx-ui-components",
     "lint:docs": "ng lint demo",
+    "publish:lib": "ng build ngx-ui-components --prod && npm run copy-assets",
     "publish:docs": "npx angular-cli-ghpages --dir=./dist/demo",
     "copy-assets": "gulp",
     "generate-docs": "compodoc -p projects/ngx-ui-components/tsconfig.lib.json -d projects/demo/src --disableCoverage --disableSourceCode --disablePrivate --disableProtected -e json",
