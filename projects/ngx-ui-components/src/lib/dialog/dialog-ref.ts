@@ -76,14 +76,14 @@ export class DialogRef<T = any> {
   }
 
   /**
-   * Get an observable that is notified when the dialog is finished opening.
+   * Get an observable that is notified when the dialog is finished closing.
    */
   afterClosed(): Observable<any> {
     return this.afterClosed$.asObservable();
   }
 
   /**
-   * Get an observable that is notified when the dialog is finished opening.
+   * Get an observable that is notified when the dialog has started closing.
    */
   beforeClosed(): Observable<void> {
     return this.beforeClosed$.asObservable();
