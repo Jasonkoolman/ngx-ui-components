@@ -290,7 +290,7 @@
         },
         {
             "name": "DialogConfig",
-            "id": "class-DialogConfig-b6c882ec22466b2b4769280b6d679334",
+            "id": "class-DialogConfig-97ad602beabce1ac40f7b08597c7e06d",
             "file": "projects/ngx-ui-components/src/lib/dialog/dialog-config.ts",
             "type": "class",
             "properties": [
@@ -321,7 +321,7 @@
                 {
                     "name": "autoFocus",
                     "defaultValue": "true",
-                    "type": "",
+                    "type": "boolean",
                     "optional": true,
                     "description": "<p>Whether the dialog should focus the first focusable element on open. </p>\n",
                     "line": 27
@@ -336,7 +336,7 @@
                 {
                     "name": "closeOnBackdropClick",
                     "defaultValue": "true",
-                    "type": "",
+                    "type": "boolean",
                     "optional": true,
                     "description": "<p>Whether the dialog should close when the user clicks on the backdrop. </p>\n",
                     "line": 18
@@ -344,7 +344,7 @@
                 {
                     "name": "closeOnEscape",
                     "defaultValue": "true",
-                    "type": "",
+                    "type": "boolean",
                     "optional": true,
                     "description": "<p>Whether the dialog should close when the user presses escape. </p>\n",
                     "line": 21
@@ -352,7 +352,7 @@
                 {
                     "name": "closeOnNavigation",
                     "defaultValue": "true",
-                    "type": "",
+                    "type": "boolean",
                     "optional": true,
                     "description": "<p>Whether the dialog should close when the user goes backwards/forwards in history. </p>\n",
                     "line": 24
@@ -375,7 +375,7 @@
                 {
                     "name": "hasBackdrop",
                     "defaultValue": "true",
-                    "type": "",
+                    "type": "boolean",
                     "optional": true,
                     "description": "<p>Whether the dialog has a backdrop. </p>\n",
                     "line": 15
@@ -419,7 +419,7 @@
                 {
                     "name": "useCssAnimations",
                     "defaultValue": "false",
-                    "type": "",
+                    "type": "boolean",
                     "optional": true,
                     "description": "<p>Whether the dialog should listen to CSS animations instead of Angular animations. </p>\n",
                     "line": 30
@@ -434,7 +434,7 @@
         },
         {
             "name": "DialogRef",
-            "id": "class-DialogRef-e036eecfdb071b227ecf91690fd5c10b",
+            "id": "class-DialogRef-5f2262c2a72c72af774de82ae673e464",
             "file": "projects/ngx-ui-components/src/lib/dialog/dialog-ref.ts",
             "type": "class",
             "constructorObj": {
@@ -448,14 +448,9 @@
                     {
                         "name": "containerInstance",
                         "type": "DialogContainerComponent"
-                    },
-                    {
-                        "name": "id",
-                        "type": "",
-                        "defaultValue": "containerInstance.attrId"
                     }
                 ],
-                "line": 22,
+                "line": 25,
                 "jsdoctags": [
                     {
                         "name": "overlayRef",
@@ -470,14 +465,6 @@
                         "tagName": {
                             "text": "param"
                         }
-                    },
-                    {
-                        "name": "id",
-                        "type": "",
-                        "defaultValue": "containerInstance.attrId",
-                        "tagName": {
-                            "text": "param"
-                        }
                     }
                 ]
             },
@@ -487,7 +474,7 @@
                     "type": "T",
                     "optional": false,
                     "description": "<p>The instance of component opened into the dialog. </p>\n",
-                    "line": 13,
+                    "line": 16,
                     "modifierKind": [
                         114
                     ]
@@ -497,18 +484,18 @@
                     "type": "DialogContainerComponent",
                     "optional": false,
                     "description": "",
-                    "line": 26,
+                    "line": 29,
                     "modifierKind": [
                         114
                     ]
                 },
                 {
                     "name": "id",
-                    "defaultValue": "containerInstance.attrId",
-                    "type": "",
+                    "defaultValue": "this.containerInstance.attrId",
+                    "type": "string",
                     "optional": false,
-                    "description": "",
-                    "line": 27,
+                    "description": "<p>Unique generated identifier for the dialog </p>\n",
+                    "line": 13,
                     "modifierKind": [
                         114,
                         132
@@ -522,8 +509,8 @@
                     "optional": false,
                     "returnType": "Observable<any>",
                     "typeParameters": [],
-                    "line": 81,
-                    "description": "<p>Get an observable that is notified when the dialog is finished opening.</p>\n"
+                    "line": 83,
+                    "description": "<p>Get an observable that is notified when the dialog is finished closing.</p>\n"
                 },
                 {
                     "name": "afterOpened",
@@ -531,7 +518,7 @@
                     "optional": false,
                     "returnType": "Observable<void>",
                     "typeParameters": [],
-                    "line": 74,
+                    "line": 76,
                     "description": "<p>Get an observable that is notified when the dialog is finished opening.</p>\n"
                 },
                 {
@@ -540,8 +527,8 @@
                     "optional": false,
                     "returnType": "Observable<void>",
                     "typeParameters": [],
-                    "line": 88,
-                    "description": "<p>Get an observable that is notified when the dialog is finished opening.</p>\n"
+                    "line": 90,
+                    "description": "<p>Get an observable that is notified when the dialog has started closing.</p>\n"
                 },
                 {
                     "name": "close",
@@ -555,21 +542,21 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 54,
+                    "line": 56,
                     "description": "<p>Close the dialog.</p>\n",
                     "jsdoctags": [
                         {
                             "name": {
-                                "pos": 1616,
-                                "end": 1622,
+                                "pos": 1682,
+                                "end": 1688,
                                 "flags": 0,
                                 "escapedText": "result"
                             },
                             "type": "any",
                             "optional": true,
                             "tagName": {
-                                "pos": 1610,
-                                "end": 1615,
+                                "pos": 1676,
+                                "end": 1681,
                                 "flags": 0,
                                 "escapedText": "param"
                             },
@@ -817,7 +804,7 @@
         },
         {
             "name": "TooltipDirective",
-            "id": "directive-TooltipDirective-c013b3aa3ca807d1b01b8eecfa0f0aaa",
+            "id": "directive-TooltipDirective-877768fdc7fb8959b585ee6a9cbee828",
             "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip.directive.ts",
             "type": "directive",
             "description": "",
@@ -834,7 +821,8 @@
                     "name": "hideDelay",
                     "defaultValue": "0",
                     "description": "<p>The delay before hiding the tooltip </p>\n",
-                    "line": 30
+                    "line": 30,
+                    "type": "number"
                 },
                 {
                     "name": "position",
@@ -847,29 +835,30 @@
                     "name": "showDelay",
                     "defaultValue": "50",
                     "description": "<p>The delay before showing the tooltip </p>\n",
-                    "line": 27
+                    "line": 27,
+                    "type": "number"
                 },
                 {
                     "name": "uiTooltip",
-                    "defaultValue": "''",
                     "description": "<p>Content of the tooltip </p>\n",
-                    "line": 21
+                    "line": 21,
+                    "type": "string"
                 }
             ],
             "outputsClass": [
                 {
                     "name": "hidden",
-                    "defaultValue": "new EventEmitter<void>()",
+                    "defaultValue": "new EventEmitter()",
                     "description": "<p>Emits when the tooltip is done hiding </p>\n",
                     "line": 39,
-                    "type": "EventEmitter"
+                    "type": "EventEmitter<void>"
                 },
                 {
                     "name": "shown",
-                    "defaultValue": "new EventEmitter<void>()",
+                    "defaultValue": "new EventEmitter()",
                     "description": "<p>Emits when the tooltip is done showing </p>\n",
                     "line": 36,
-                    "type": "EventEmitter"
+                    "type": "EventEmitter<void>"
                 }
             ],
             "hostBindings": [],
@@ -1329,7 +1318,7 @@
         },
         {
             "name": "PaginatorComponent",
-            "id": "component-PaginatorComponent-ac16bd9676f5e866a6d45fd658878dd6",
+            "id": "component-PaginatorComponent-5d647aaae3f83559274a09b7b67a6008",
             "file": "projects/ngx-ui-components/src/lib/paginator/paginator.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -1349,7 +1338,8 @@
                     "name": "disabled",
                     "defaultValue": "false",
                     "description": "<p>Whether to disable the paginator </p>\n",
-                    "line": 45
+                    "line": 45,
+                    "type": "boolean"
                 },
                 {
                     "name": "length",
@@ -1367,34 +1357,38 @@
                     "name": "perPage",
                     "defaultValue": "10",
                     "description": "<p>The numbers of items per page </p>\n",
-                    "line": 39
+                    "line": 39,
+                    "type": "number"
                 },
                 {
                     "name": "range",
                     "defaultValue": "3",
                     "description": "<p>The range size of items to display </p>\n",
-                    "line": 42
+                    "line": 42,
+                    "type": "number"
                 },
                 {
                     "name": "showBoundaryLinks",
                     "defaultValue": "false",
                     "description": "<p>Whether to show boundary first and last page links </p>\n",
-                    "line": 51
+                    "line": 51,
+                    "type": "boolean"
                 },
                 {
                     "name": "showEllipsis",
                     "defaultValue": "false",
                     "description": "<p>Whether to show ellipsis </p>\n",
-                    "line": 48
+                    "line": 48,
+                    "type": "boolean"
                 }
             ],
             "outputsClass": [
                 {
                     "name": "pageChange",
-                    "defaultValue": "new EventEmitter<PageEvent>()",
+                    "defaultValue": "new EventEmitter()",
                     "description": "<p>Emits whenever the page number changes </p>\n",
                     "line": 54,
-                    "type": "EventEmitter"
+                    "type": "EventEmitter<PageEvent>"
                 }
             ],
             "propertiesClass": [
