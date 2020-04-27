@@ -20,6 +20,10 @@
     span {
       cursor: default;
       border-bottom: 1px dotted;
+
+      + span:before {
+        content: ', ';
+      }
     }
   }
 

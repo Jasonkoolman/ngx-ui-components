@@ -15,8 +15,10 @@
           <code>{{ prop.name }}{{ prop.optional ? '?' : '' }}: {{ prop.type }}</code>
         </td>
         <td>
-          <div [innerHTML]="prop.description"></div>
-          <p><small *ngIf="prop.defaultValue">Default value: <code>{{ prop.defaultValue }}</code></small></p>
+          <p [outerHTML]="prop.description"></p>
+          <p *ngIf="prop.defaultValue">
+            <small>Default value: <code>{{ prop.defaultValue }}</code></small>
+          </p>
         </td>
       </tr>
       </tbody>
@@ -29,10 +31,12 @@
       <tbody>
       <tr *ngFor="let method of item.methods">
         <td width="25%">
-          <code>{{ method.name }}(<span [uiTooltip]="arg.type" *ngFor="let arg of method.args">{{ arg.name }}{{ arg.optional ? '?' : '' }}, </span>): {{ method.returnType }}</code>
+          <code>
+            {{ method.name }}(<span [uiTooltip]="arg.type" *ngFor="let arg of method.args">{{ arg.name }}{{ arg.optional ? '?' : '' }}</span>): {{ method.returnType }}
+          </code>
         </td>
         <td>
-          <div [innerHTML]="method.description"></div>
+          <p [outerHTML]="method.description"></p>
         </td>
       </tr>
       </tbody>
@@ -48,8 +52,10 @@
             <code>{{ prop.name }}: {{ prop.type }}</code>
           </td>
           <td>
-            <div [innerHTML]="prop.description"></div>
-            <p><small *ngIf="prop.defaultValue">Default value: <code>{{ prop.defaultValue }}</code></small></p>
+            <p [outerHTML]="prop.description"></p>
+            <p *ngIf="prop.defaultValue">
+              <small>Default value: <code>{{ prop.defaultValue }}</code></small>
+            </p>
           </td>
         </tr>
       </tbody>
