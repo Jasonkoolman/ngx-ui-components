@@ -36,22 +36,22 @@ export class PaginatorComponent implements OnChanges, OnDestroy {
   @Input() length: number;
 
   /** The numbers of items per page */
-  @Input() perPage = 10;
+  @Input() perPage: number = 10;
 
   /** The range size of items to display */
-  @Input() range = 3;
+  @Input() range: number = 3;
 
   /** Whether to disable the paginator */
-  @Input() disabled = false;
+  @Input() disabled: boolean = false;
 
   /** Whether to show ellipsis */
-  @Input() showEllipsis = false;
+  @Input() showEllipsis: boolean = false;
 
   /** Whether to show boundary first and last page links */
-  @Input() showBoundaryLinks = false;
+  @Input() showBoundaryLinks: boolean = false;
 
   /** Emits whenever the page number changes */
-  @Output() pageChange = new EventEmitter<PageEvent>();
+  @Output() pageChange: EventEmitter<PageEvent> = new EventEmitter();
 
   /** Notifies when the component is destroyed */
   private destroyed$ = new Subject<void>();
