@@ -1,7 +1,7 @@
 {
   "name": "@koolm/ngx-ui-components",
   "description": "Lightweight and flexible UI components made for Angular",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Jason Koolman <jason.koolman@hotmail.com>",
   "keywords": [
     "angular",
