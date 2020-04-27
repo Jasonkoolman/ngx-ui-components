@@ -8,8 +8,9 @@ import { UidTooltipDirections } from './demos/directions/tooltip-directions';
 import { UidTooltipDirectionsModule } from './demos/directions/tooltip-directions.module';
 import { UidTooltipDelay } from './demos/delay/tooltip-delay';
 import { UidTooltipDelayModule } from './demos/delay/tooltip-delay.module';
+import { UidComponentDemo, UidComponentDocItem } from '../component.interface';
 
-const DEMOS = [
+const DEMOS: UidComponentDemo[] = [
   {
     id: 'basic',
     title: 'Basic tooltip',
@@ -66,6 +67,13 @@ const DEMOS = [
   }
 ];
 
+const DOCS: UidComponentDocItem[] = [
+  {
+    key: 'directives',
+    name: 'tooltip.directive.ts'
+  }
+];
+
 
 @NgModule({
   imports: [
@@ -82,6 +90,7 @@ export class UidTooltipModule {
     this.componentService.addComponent('tooltip', {
       name: 'Tooltip',
       demos: DEMOS,
+      docs: DOCS
     });
   }
 

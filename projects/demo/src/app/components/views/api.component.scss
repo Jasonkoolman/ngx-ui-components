@@ -1,0 +1,63 @@
+@import "../../../assets/scss/variables";
+
+.api-item {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $border-dark;
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  code {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    background-color: $bg-light;
+    color: #d73a49;
+    padding: 2px 4px;
+    border-radius: 2px;
+
+    span {
+      cursor: default;
+      border-bottom: 1px dotted;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    padding: 2px 0;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 16px;
+    border-collapse: collapse;
+    border: 1px solid $border-light;
+
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid $border-light;
+      border-right: 1px solid $border-light;
+      vertical-align: top;
+
+      &:first-child {
+        background-color: $bg-light;
+      }
+    }
+  }
+}
+
+.api-item-labels {
+  margin-top: -8px;
+  margin-bottom: 24px;
+
+  span {
+    margin-right: 8px;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1;
+    color: #FFF;
+    background-color: $color-secondary;
+    border-radius: 2px;
+  }
+}

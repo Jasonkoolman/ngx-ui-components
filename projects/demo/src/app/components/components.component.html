@@ -1,12 +1,8 @@
 <header class="ui-docs-page-header">
   <h1>{{ name }}</h1>
+  <a routerLink="examples">Examples</a> | <a routerLink="api">Api</a>
 </header>
 
 <div class="ui-docs-page-content">
-  <uid-demo *ngFor="let demo of demos"
-            [id]="demo.id"
-            [title]="demo.title"
-            [files]="demo.files"
-            [component]="demo.component">
-  </uid-demo>
+  <router-outlet></router-outlet>
 </div>

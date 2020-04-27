@@ -8,8 +8,9 @@ import { UidPaginatorBasic } from './demos/basic/paginator-basic';
 import { UidPaginatorConfiguration } from './demos/configuration/paginator-configuration';
 import { UidPaginatorTemplates } from './demos/templates/paginator-templates';
 import { UidComponentService } from '../component.service';
+import { UidComponentDemo, UidComponentDocItem } from '../component.interface';
 
-const DEMOS = [
+const DEMOS: UidComponentDemo[] = [
   {
     id: 'basic',
     title: 'Basic paginator',
@@ -61,7 +62,14 @@ const DEMOS = [
       }
     ]
   }
-]
+];
+
+const DOCS: UidComponentDocItem[] = [
+  {
+    key: 'components',
+    name: 'paginator.component.ts'
+  }
+];
 
 
 @NgModule({
@@ -79,6 +87,7 @@ export class UidPaginatorModule {
     this.componentService.addComponent('paginator', {
       name: 'Paginator',
       demos: DEMOS,
+      docs: DOCS
     });
   }
 

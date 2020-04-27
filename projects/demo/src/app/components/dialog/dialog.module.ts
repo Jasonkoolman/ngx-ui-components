@@ -6,13 +6,13 @@ import { UidSharedModule } from '../../shared/shared.module';
 import { UidBasicComponent } from './demos/basic/dialog-basic';
 import { UidCustomAnimationComponent } from './demos/custom-animations/dialog-custom-animations';
 import { UidComponentService } from '../component.service';
+import { UidComponentDemo, UidComponentDocItem } from '../component.interface';
 
-const DEMOS = [
+const DEMOS: UidComponentDemo[] = [
   {
     id: 'basic',
     title: 'Basic dialog',
     component: UidBasicComponent,
-    description: null,
     files: [
       {
         name: 'basic-dialog.html',
@@ -30,7 +30,6 @@ const DEMOS = [
     id: 'configuration',
     title: 'Configuring the dialog',
     component: UidBasicComponent,
-    description: null,
     files: [
       {
         name: 'basic-dialog.html',
@@ -48,7 +47,6 @@ const DEMOS = [
     id: 'custom-animations',
     title: 'Using custom animations',
     component: UidCustomAnimationComponent,
-    description: null,
     files: [
       {
         name: 'animated-dialog.html',
@@ -69,6 +67,21 @@ const DEMOS = [
   }
 ];
 
+const DOCS: UidComponentDocItem[] = [
+  {
+    key: 'injectables',
+    name: 'dialog.service.ts'
+  },
+  {
+    key: 'classes',
+    name: 'dialog-config.ts'
+  },
+  {
+    key: 'classes',
+    name: 'dialog-ref.ts'
+  }
+];
+
 
 @NgModule({
   imports: [
@@ -84,6 +97,7 @@ export class UidDialogModule {
     this.componentService.addComponent('dialog', {
       name: 'Dialog',
       demos: DEMOS,
+      docs: DOCS
     });
   }
 

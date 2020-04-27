@@ -1,0 +1,74 @@
+<section *ngFor="let item of items" class="api-item">
+  <h2>{{ item.name }}</h2>
+
+  <div class="api-item-labels">
+    <span title="Type">{{ item.type }}</span>
+    <span title="Selector" *ngIf="item.selector">{{ item.selector }}</span>
+  </div>
+
+  <div *ngIf="item.properties && item.properties.length">
+    <h3>Properties</h3>
+    <table>
+      <tbody>
+      <tr *ngFor="let prop of item.properties">
+        <td width="25%">
+          <code>{{ prop.name }}{{ prop.optional ? '?' : '' }}: {{ prop.type }}</code>
+        </td>
+        <td>
+          <div [innerHTML]="prop.description"></div>
+          <p><small *ngIf="prop.defaultValue">Default value: <code>{{ prop.defaultValue }}</code></small></p>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="item.methods && item.methods.length">
+    <h3>Methods</h3>
+    <table>
+      <tbody>
+      <tr *ngFor="let method of item.methods">
+        <td width="25%">
+          <code>{{ method.name }}(<span [uiTooltip]="arg.type" *ngFor="let arg of method.args">{{ arg.name }}{{ arg.optional ? '?' : '' }}, </span>): {{ method.returnType }}</code>
+        </td>
+        <td>
+          <div [innerHTML]="method.description"></div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="item.inputs && item.inputs.length">
+    <h3>Inputs</h3>
+    <table>
+      <tbody>
+        <tr *ngFor="let prop of item.inputs">
+          <td width="25%">
+            <code>{{ prop.name }}: {{ prop.type }}</code>
+          </td>
+          <td>
+            <div [innerHTML]="prop.description"></div>
+            <p><small *ngIf="prop.defaultValue">Default value: <code>{{ prop.defaultValue }}</code></small></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="item.outputs && item.outputs.length">
+    <h3>Outputs</h3>
+    <table>
+      <tbody>
+        <tr *ngFor="let prop of item.outputs">
+          <td width="25%">
+            <code>{{ prop.name }}: {{ prop.type }}</code>
+          </td>
+          <td>
+            <p [outerHTML]="prop.description"></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
