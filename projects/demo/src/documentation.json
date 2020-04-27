@@ -1,0 +1,3802 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "AbstractAnimationEvent",
+            "id": "interface-AbstractAnimationEvent-903ae64671878eeb6b0475d0619510f5",
+            "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+            "type": "interface",
+            "properties": [
+                {
+                    "name": "phaseName",
+                    "type": "AnimationPhase",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "toState",
+                    "type": "AnimationState",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "description": "<p>Represents an abstract animation event. </p>\n",
+            "methods": []
+        },
+        {
+            "name": "DialogSize",
+            "id": "interface-DialogSize-f7d63d8af3c968b0ca3fa632da9f9dab",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog.interface.ts",
+            "type": "interface",
+            "properties": [
+                {
+                    "name": "height",
+                    "type": "number | string",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "maxHeight",
+                    "type": "number | string",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "maxWidth",
+                    "type": "number | string",
+                    "optional": true,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "minHeight",
+                    "type": "number | string",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "minWidth",
+                    "type": "number | string",
+                    "optional": true,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "width",
+                    "type": "number | string",
+                    "optional": true,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        },
+        {
+            "name": "PageEvent",
+            "id": "interface-PageEvent-06cf03bd49c03133ffc07d17552d53ee",
+            "file": "projects/ngx-ui-components/src/lib/paginator/paginator.interface.ts",
+            "type": "interface",
+            "properties": [
+                {
+                    "name": "page",
+                    "type": "number",
+                    "optional": false,
+                    "description": "<p>The current page number </p>\n",
+                    "line": 3
+                },
+                {
+                    "name": "pageCount",
+                    "type": "number",
+                    "optional": false,
+                    "description": "<p>The total numbers of pages </p>\n",
+                    "line": 9
+                },
+                {
+                    "name": "previousPage",
+                    "type": "number",
+                    "optional": false,
+                    "description": "<p>The previously selected page number </p>\n",
+                    "line": 6
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 150,
+            "methods": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "DialogService",
+            "id": "injectable-DialogService-3a1a6ae9247aa211829d93553565b3d5",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "closeAll",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 40,
+                    "description": "<p>Closes all opened dialogs.</p>\n"
+                },
+                {
+                    "name": "open",
+                    "args": [
+                        {
+                            "name": "component",
+                            "type": "ComponentType<T>"
+                        },
+                        {
+                            "name": "config",
+                            "type": "DialogConfig<D>",
+                            "optional": true
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "DialogRef",
+                    "typeParameters": [
+                        "T",
+                        "D"
+                    ],
+                    "line": 26,
+                    "description": "<p>Opens a dialog containing the given component.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 665,
+                                "end": 674,
+                                "flags": 0,
+                                "escapedText": "component"
+                            },
+                            "type": "ComponentType<T>",
+                            "tagName": {
+                                "pos": 657,
+                                "end": 662,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>Type of the the component to load into the dialog.</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 743,
+                                "end": 749,
+                                "flags": 0,
+                                "escapedText": "config"
+                            },
+                            "type": "DialogConfig<D>",
+                            "optional": true,
+                            "tagName": {
+                                "pos": 735,
+                                "end": 740,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>Dialog configuration options.</p>\n"
+                        },
+                        {
+                            "tagName": {
+                                "pos": 792,
+                                "end": 799,
+                                "flags": 0,
+                                "escapedText": "returns"
+                            },
+                            "comment": "<p>reference   Reference of the newly-opened dialog.</p>\n"
+                        }
+                    ]
+                }
+            ],
+            "description": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "overlay",
+                        "type": "Overlay"
+                    }
+                ],
+                "line": 15,
+                "jsdoctags": [
+                    {
+                        "name": "overlay",
+                        "type": "Overlay",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "injectable"
+        }
+    ],
+    "classes": [
+        {
+            "name": "AnimationEventName",
+            "id": "class-AnimationEventName-903ae64671878eeb6b0475d0619510f5",
+            "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+            "type": "class",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "animationstart",
+                        "type": "string"
+                    },
+                    {
+                        "name": "animationend",
+                        "type": "string"
+                    }
+                ],
+                "line": 24,
+                "jsdoctags": [
+                    {
+                        "name": "animationstart",
+                        "type": "string",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "animationend",
+                        "type": "string",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "animationend",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 27,
+                    "modifierKind": [
+                        114
+                    ]
+                },
+                {
+                    "name": "animationstart",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 26,
+                    "modifierKind": [
+                        114
+                    ]
+                }
+            ],
+            "description": "<p>Holds the (cross-browser) animation event names. </p>\n",
+            "rawdescription": "Holds the (cross-browser) animation event names. ",
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "DialogConfig",
+            "id": "class-DialogConfig-b6c882ec22466b2b4769280b6d679334",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog-config.ts",
+            "type": "class",
+            "properties": [
+                {
+                    "name": "ariaDescribedBy",
+                    "defaultValue": "null",
+                    "type": "string | null",
+                    "optional": true,
+                    "description": "<p>ID of the element that describes the dialog. </p>\n",
+                    "line": 33
+                },
+                {
+                    "name": "ariaLabel",
+                    "defaultValue": "null",
+                    "type": "string | null",
+                    "optional": true,
+                    "description": "<p>Aria label to assign to the dialog element. </p>\n",
+                    "line": 39
+                },
+                {
+                    "name": "ariaLabelledBy",
+                    "defaultValue": "null",
+                    "type": "string | null",
+                    "optional": true,
+                    "description": "<p>ID of the element that labels the dialog. </p>\n",
+                    "line": 36
+                },
+                {
+                    "name": "autoFocus",
+                    "defaultValue": "true",
+                    "type": "",
+                    "optional": true,
+                    "description": "<p>Whether the dialog should focus the first focusable element on open. </p>\n",
+                    "line": 27
+                },
+                {
+                    "name": "backdropClass",
+                    "type": "string",
+                    "optional": true,
+                    "description": "<p>Custom class for the backdrop. </p>\n",
+                    "line": 48
+                },
+                {
+                    "name": "closeOnBackdropClick",
+                    "defaultValue": "true",
+                    "type": "",
+                    "optional": true,
+                    "description": "<p>Whether the dialog should close when the user clicks on the backdrop. </p>\n",
+                    "line": 18
+                },
+                {
+                    "name": "closeOnEscape",
+                    "defaultValue": "true",
+                    "type": "",
+                    "optional": true,
+                    "description": "<p>Whether the dialog should close when the user presses escape. </p>\n",
+                    "line": 21
+                },
+                {
+                    "name": "closeOnNavigation",
+                    "defaultValue": "true",
+                    "type": "",
+                    "optional": true,
+                    "description": "<p>Whether the dialog should close when the user goes backwards/forwards in history. </p>\n",
+                    "line": 24
+                },
+                {
+                    "name": "data",
+                    "defaultValue": "null",
+                    "type": "D",
+                    "optional": true,
+                    "description": "<p>Data being passed to the child component. </p>\n",
+                    "line": 6
+                },
+                {
+                    "name": "dialogClass",
+                    "type": "string",
+                    "optional": true,
+                    "description": "<p>Custom class for the dialog. </p>\n",
+                    "line": 42
+                },
+                {
+                    "name": "hasBackdrop",
+                    "defaultValue": "true",
+                    "type": "",
+                    "optional": true,
+                    "description": "<p>Whether the dialog has a backdrop. </p>\n",
+                    "line": 15
+                },
+                {
+                    "name": "panelClass",
+                    "type": "string",
+                    "optional": true,
+                    "description": "<p>Custom class for the overlay pane. </p>\n",
+                    "line": 45
+                },
+                {
+                    "name": "positionStrategy",
+                    "type": "GlobalPositionStrategy",
+                    "optional": true,
+                    "description": "<p>Position strategy to be used for the dialog. </p>\n",
+                    "line": 51
+                },
+                {
+                    "name": "role",
+                    "defaultValue": "'dialog'",
+                    "type": "DialogRole",
+                    "optional": true,
+                    "description": "<p>The ARIA role of the dialog element. </p>\n",
+                    "line": 9
+                },
+                {
+                    "name": "scrollStrategy",
+                    "type": "ScrollStrategy",
+                    "optional": true,
+                    "description": "<p>Scroll strategy to be used for the dialog. </p>\n",
+                    "line": 54
+                },
+                {
+                    "name": "size",
+                    "type": "DialogSize",
+                    "optional": true,
+                    "description": "<p>Setters for the dialog&#39;s size. </p>\n",
+                    "line": 12
+                },
+                {
+                    "name": "useCssAnimations",
+                    "defaultValue": "false",
+                    "type": "",
+                    "optional": true,
+                    "description": "<p>Whether the dialog should listen to CSS animations instead of Angular animations. </p>\n",
+                    "line": 30
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "DialogRef",
+            "id": "class-DialogRef-e036eecfdb071b227ecf91690fd5c10b",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog-ref.ts",
+            "type": "class",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "overlayRef",
+                        "type": "OverlayRef"
+                    },
+                    {
+                        "name": "containerInstance",
+                        "type": "DialogContainerComponent"
+                    },
+                    {
+                        "name": "id",
+                        "type": "",
+                        "defaultValue": "containerInstance.attrId"
+                    }
+                ],
+                "line": 22,
+                "jsdoctags": [
+                    {
+                        "name": "overlayRef",
+                        "type": "OverlayRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "containerInstance",
+                        "type": "DialogContainerComponent",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "type": "",
+                        "defaultValue": "containerInstance.attrId",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "properties": [
+                {
+                    "name": "componentInstance",
+                    "type": "T",
+                    "optional": false,
+                    "description": "<p>The instance of component opened into the dialog. </p>\n",
+                    "line": 13,
+                    "modifierKind": [
+                        114
+                    ]
+                },
+                {
+                    "name": "containerInstance",
+                    "type": "DialogContainerComponent",
+                    "optional": false,
+                    "description": "",
+                    "line": 26,
+                    "modifierKind": [
+                        114
+                    ]
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "containerInstance.attrId",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 27,
+                    "modifierKind": [
+                        114,
+                        132
+                    ]
+                }
+            ],
+            "methods": [
+                {
+                    "name": "afterClosed",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<any>",
+                    "typeParameters": [],
+                    "line": 81,
+                    "description": "<p>Get an observable that is notified when the dialog is finished opening.</p>\n"
+                },
+                {
+                    "name": "afterOpened",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<void>",
+                    "typeParameters": [],
+                    "line": 74,
+                    "description": "<p>Get an observable that is notified when the dialog is finished opening.</p>\n"
+                },
+                {
+                    "name": "beforeClosed",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<void>",
+                    "typeParameters": [],
+                    "line": 88,
+                    "description": "<p>Get an observable that is notified when the dialog is finished opening.</p>\n"
+                },
+                {
+                    "name": "close",
+                    "args": [
+                        {
+                            "name": "result",
+                            "type": "any",
+                            "optional": true
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "description": "<p>Close the dialog.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 1616,
+                                "end": 1622,
+                                "flags": 0,
+                                "escapedText": "result"
+                            },
+                            "type": "any",
+                            "optional": true,
+                            "tagName": {
+                                "pos": 1610,
+                                "end": 1615,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>Result to return to the dialog opener.</p>\n"
+                        }
+                    ]
+                }
+            ],
+            "indexSignatures": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
+    "directives": [
+        {
+            "name": "DialogCloseDirective",
+            "id": "directive-DialogCloseDirective-002064dd6a9eba62debfaf60454459cb",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog-directives.ts",
+            "type": "directive",
+            "description": "<p>Button to close a dialog.</p>\n",
+            "selector": "[ui-dialog-close], [uiDialogClose]",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "result",
+                    "line": 52,
+                    "type": "any"
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'button'",
+                    "line": 51
+                }
+            ],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [
+                {
+                    "name": "click",
+                    "args": [],
+                    "argsDecorator": [],
+                    "line": 56
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "dialogRef",
+                        "type": "DialogRef"
+                    }
+                ],
+                "line": 52,
+                "jsdoctags": [
+                    {
+                        "name": "dialogRef",
+                        "type": "DialogRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "DialogContentDirective",
+            "id": "directive-DialogContentDirective-002064dd6a9eba62debfaf60454459cb",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog-directives.ts",
+            "type": "directive",
+            "description": "<p>Content container of a dialog.</p>\n",
+            "selector": "[ui-dialog-content], ui-dialog-content, [uiDialogContent]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "defaultValue": "'dialog-content'",
+                    "line": 30
+                }
+            ],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": []
+        },
+        {
+            "name": "DialogFooterDirective",
+            "id": "directive-DialogFooterDirective-002064dd6a9eba62debfaf60454459cb",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog-directives.ts",
+            "type": "directive",
+            "description": "<p>Fixed footer of a dialog.</p>\n",
+            "selector": "[ui-dialog-footer], ui-dialog-footer, [uiDialogFooter]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "defaultValue": "'dialog-footer'",
+                    "line": 40
+                }
+            ],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": []
+        },
+        {
+            "name": "DialogTitleDirective",
+            "id": "directive-DialogTitleDirective-002064dd6a9eba62debfaf60454459cb",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog-directives.ts",
+            "type": "directive",
+            "description": "<p>Title of a dialog.</p>\n",
+            "selector": "[ui-dialog-title], [uiDialogTitle]",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "id",
+                    "defaultValue": "`${this.dialogRef.id}-title`",
+                    "line": 11
+                }
+            ],
+            "outputsClass": [],
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "defaultValue": "'dialog-title'",
+                    "line": 12
+                }
+            ],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "dialogRef",
+                        "type": "DialogRef"
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "dialogRef",
+                        "type": "DialogRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "PaginatorEllipsis",
+            "id": "directive-PaginatorEllipsis-23dbc71501b7c75bbbc89c0a6715fdb7",
+            "file": "projects/ngx-ui-components/src/lib/paginator/paginator-directives.ts",
+            "type": "directive",
+            "description": "<p>A directive to match the &#39;ellipsis&#39; link template.</p>\n",
+            "selector": "ng-template[ui-paginator-ellipsis], ng-template[uiPaginatorEllipsis]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 9
+            }
+        },
+        {
+            "name": "PaginatorFirst",
+            "id": "directive-PaginatorFirst-23dbc71501b7c75bbbc89c0a6715fdb7",
+            "file": "projects/ngx-ui-components/src/lib/paginator/paginator-directives.ts",
+            "type": "directive",
+            "description": "<p>A directive to match the &#39;first&#39; link template.</p>\n",
+            "selector": "ng-template[ui-paginator-first], ng-template[uiPaginatorFirst]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 19
+            }
+        },
+        {
+            "name": "PaginatorLast",
+            "id": "directive-PaginatorLast-23dbc71501b7c75bbbc89c0a6715fdb7",
+            "file": "projects/ngx-ui-components/src/lib/paginator/paginator-directives.ts",
+            "type": "directive",
+            "description": "<p>A directive to match the &#39;last&#39; link template.</p>\n",
+            "selector": "ng-template[ui-paginator-last], ng-template[uiPaginatorLast]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": []
+        },
+        {
+            "name": "PaginatorNext",
+            "id": "directive-PaginatorNext-23dbc71501b7c75bbbc89c0a6715fdb7",
+            "file": "projects/ngx-ui-components/src/lib/paginator/paginator-directives.ts",
+            "type": "directive",
+            "description": "<p>A directive to match the &#39;next&#39; link template.</p>\n",
+            "selector": "ng-template[ui-paginator-next], ng-template[uiPaginatorNext]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": []
+        },
+        {
+            "name": "PaginatorPrev",
+            "id": "directive-PaginatorPrev-23dbc71501b7c75bbbc89c0a6715fdb7",
+            "file": "projects/ngx-ui-components/src/lib/paginator/paginator-directives.ts",
+            "type": "directive",
+            "description": "<p>A directive to match the &#39;prev&#39; link template.</p>\n",
+            "selector": "ng-template[ui-paginator-prev], ng-template[uiPaginatorPrev]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": []
+        },
+        {
+            "name": "TooltipDirective",
+            "id": "directive-TooltipDirective-c013b3aa3ca807d1b01b8eecfa0f0aaa",
+            "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip.directive.ts",
+            "type": "directive",
+            "description": "",
+            "selector": "[ui-tooltip], [uiTooltip]",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "description": "<p>Whether the tooltip is disabled </p>\n",
+                    "line": 33,
+                    "type": "boolean"
+                },
+                {
+                    "name": "hideDelay",
+                    "defaultValue": "0",
+                    "description": "<p>The delay before hiding the tooltip </p>\n",
+                    "line": 30
+                },
+                {
+                    "name": "position",
+                    "defaultValue": "TooltipPosition.Bottom",
+                    "description": "<p>Position of the tooltip relative to the origin </p>\n",
+                    "line": 24,
+                    "type": "string"
+                },
+                {
+                    "name": "showDelay",
+                    "defaultValue": "50",
+                    "description": "<p>The delay before showing the tooltip </p>\n",
+                    "line": 27
+                },
+                {
+                    "name": "uiTooltip",
+                    "defaultValue": "''",
+                    "description": "<p>Content of the tooltip </p>\n",
+                    "line": 21
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "hidden",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "description": "<p>Emits when the tooltip is done hiding </p>\n",
+                    "line": 39,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "shown",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "description": "<p>Emits when the tooltip is done showing </p>\n",
+                    "line": 36,
+                    "type": "EventEmitter"
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [
+                {
+                    "name": "mouseenter",
+                    "args": [],
+                    "argsDecorator": [],
+                    "line": 69
+                },
+                {
+                    "name": "mouseleave",
+                    "args": [],
+                    "argsDecorator": [],
+                    "line": 74
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "attach",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "TooltipContainerComponent",
+                    "typeParameters": [],
+                    "line": 142,
+                    "description": "<p>Attaches a new tooltip component.</p>\n"
+                },
+                {
+                    "name": "createOverlay",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "OverlayRef",
+                    "typeParameters": [],
+                    "line": 169,
+                    "description": "<p>Creates a new tooltip overlay.</p>\n"
+                },
+                {
+                    "name": "detach",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 158,
+                    "description": "<p>Detaches the current tooltip component.</p>\n"
+                },
+                {
+                    "name": "hide",
+                    "args": [
+                        {
+                            "name": "delay",
+                            "type": "",
+                            "defaultValue": "this.hideDelay"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 108,
+                    "description": "<p>Hides the tooltip.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "delay",
+                            "type": "",
+                            "defaultValue": "this.hideDelay",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 188,
+                    "description": "<p>Invoked when the directive is destroyed.</p>\n"
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 78
+                },
+                {
+                    "name": "show",
+                    "args": [
+                        {
+                            "name": "delay",
+                            "type": "",
+                            "defaultValue": "this.showDelay"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 83,
+                    "description": "<p>Shows the tooltip.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "delay",
+                            "type": "",
+                            "defaultValue": "this.showDelay",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "implements": [
+                "OnInit",
+                "OnDestroy"
+            ],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "overlay",
+                        "type": "Overlay"
+                    },
+                    {
+                        "name": "overlayPositionBuilder",
+                        "type": "OverlayPositionBuilder"
+                    },
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef"
+                    }
+                ],
+                "line": 60,
+                "jsdoctags": [
+                    {
+                        "name": "overlay",
+                        "type": "Overlay",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "overlayPositionBuilder",
+                        "type": "OverlayPositionBuilder",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "accessors": {
+                "isShowing": {
+                    "name": "isShowing",
+                    "getSignature": {
+                        "name": "isShowing",
+                        "type": "boolean",
+                        "returnType": "boolean",
+                        "line": 135,
+                        "description": "<p>Whether the tooltip components is (busy) showing.</p>\n"
+                    }
+                }
+            }
+        }
+    ],
+    "components": [
+        {
+            "name": "DialogContainerComponent",
+            "id": "component-DialogContainerComponent-ebe098c30a7eca8159c45ec4b7d78139",
+            "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-dialog",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<ng-template cdkPortalOutlet></ng-template>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "animationStateChanged$",
+                    "defaultValue": "new EventEmitter<AbstractAnimationEvent>()",
+                    "type": "",
+                    "optional": false,
+                    "description": "<p>Emits when the animation state changed </p>\n",
+                    "line": 58,
+                    "modifierKind": [
+                        114,
+                        132
+                    ]
+                },
+                {
+                    "name": "dialogConfig",
+                    "type": "DialogConfig",
+                    "optional": false,
+                    "description": "",
+                    "line": 76,
+                    "modifierKind": [
+                        114,
+                        132
+                    ]
+                },
+                {
+                    "name": "portalOutlet",
+                    "type": "CdkPortalOutlet",
+                    "optional": false,
+                    "description": "<p>The portal outlet inside of this container into which the dialog content will be loaded. </p>\n",
+                    "line": 40,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "CdkPortalOutlet, {static: true}"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "attachComponentPortal",
+                    "args": [
+                        {
+                            "name": "portal",
+                            "type": "ComponentPortal<T>"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "ComponentRef<T>",
+                    "typeParameters": [
+                        "T"
+                    ],
+                    "line": 108,
+                    "description": "<p>Attach a ComponentPortal as content to this dialog.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "portal",
+                            "type": "ComponentPortal<T>",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "nextAnimationEvent",
+                    "args": [
+                        {
+                            "name": "phaseName",
+                            "type": "AnimationPhase"
+                        },
+                        {
+                            "name": "toState",
+                            "type": "AnimationState"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<AbstractAnimationEvent>",
+                    "typeParameters": [],
+                    "line": 122,
+                    "description": "<p>Get the first dialog animation event matching the given criteria.</p>\n<p>Mocks the event after the &#39;animationTimeout&#39; time has passed, which covers\nrare cases when the animation event is not fired - for whatever reason.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "phaseName",
+                            "type": "AnimationPhase",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "toState",
+                            "type": "AnimationState",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 245,
+                    "description": "<p>Invoked when the dialog is destroyed.</p>\n"
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 96,
+                    "description": "<p>Invoked when the dialog is initialized.</p>\n"
+                },
+                {
+                    "name": "recaptureFocus",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 151,
+                    "description": "<p>Moves focus back into the dialog if it was moved out.</p>\n"
+                },
+                {
+                    "name": "startExitAnimation",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 140,
+                    "description": "<p>Start the exit animation.</p>\n"
+                }
+            ],
+            "hostBindings": [
+                {
+                    "name": "@.disabled",
+                    "defaultValue": "this.useCssAnimation",
+                    "line": 68
+                },
+                {
+                    "name": "@dialog",
+                    "line": 70
+                },
+                {
+                    "name": "attr.aria-describedby",
+                    "defaultValue": "this.dialogConfig.ariaDescribedBy",
+                    "line": 67
+                },
+                {
+                    "name": "attr.aria-label",
+                    "defaultValue": "this.dialogConfig.ariaLabel",
+                    "line": 65
+                },
+                {
+                    "name": "attr.aria-labelledby",
+                    "defaultValue": "this.dialogConfig.ariaLabelledBy",
+                    "line": 66
+                },
+                {
+                    "name": "attr.aria-modal",
+                    "defaultValue": "true",
+                    "line": 64
+                },
+                {
+                    "name": "attr.id",
+                    "defaultValue": "`${baseClass}-${uniqueId++}`",
+                    "line": 62
+                },
+                {
+                    "name": "attr.role",
+                    "defaultValue": "this.dialogConfig.role",
+                    "line": 63
+                },
+                {
+                    "name": "class",
+                    "defaultValue": "classNames(baseClass, this.dialogConfig.dialogClass)",
+                    "line": 60
+                },
+                {
+                    "name": "tabindex",
+                    "defaultValue": "-1",
+                    "line": 61
+                }
+            ],
+            "hostListeners": [
+                {
+                    "name": "@dialog.start",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "AnimationEvent"
+                        }
+                    ],
+                    "argsDecorator": [
+                        "$event"
+                    ],
+                    "line": 83
+                }
+            ],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "document",
+                        "type": "any"
+                    },
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef"
+                    },
+                    {
+                        "name": "focusTrapFactory",
+                        "type": "ConfigurableFocusTrapFactory"
+                    },
+                    {
+                        "name": "dialogConfig",
+                        "type": "DialogConfig"
+                    }
+                ],
+                "line": 70,
+                "jsdoctags": [
+                    {
+                        "name": "document",
+                        "type": "any",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "focusTrapFactory",
+                        "type": "ConfigurableFocusTrapFactory",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "dialogConfig",
+                        "type": "DialogConfig",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit",
+                "OnDestroy"
+            ]
+        },
+        {
+            "name": "PaginatorComponent",
+            "id": "component-PaginatorComponent-ac16bd9676f5e866a6d45fd658878dd6",
+            "file": "projects/ngx-ui-components/src/lib/paginator/paginator.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-paginator",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./paginator.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "description": "<p>Whether to disable the paginator </p>\n",
+                    "line": 45
+                },
+                {
+                    "name": "length",
+                    "description": "<p>The total numbers of items to be paged </p>\n",
+                    "line": 36,
+                    "type": "number"
+                },
+                {
+                    "name": "page",
+                    "description": "<p>The current page number </p>\n",
+                    "line": 28,
+                    "type": "number"
+                },
+                {
+                    "name": "perPage",
+                    "defaultValue": "10",
+                    "description": "<p>The numbers of items per page </p>\n",
+                    "line": 39
+                },
+                {
+                    "name": "range",
+                    "defaultValue": "3",
+                    "description": "<p>The range size of items to display </p>\n",
+                    "line": 42
+                },
+                {
+                    "name": "showBoundaryLinks",
+                    "defaultValue": "false",
+                    "description": "<p>Whether to show boundary first and last page links </p>\n",
+                    "line": 51
+                },
+                {
+                    "name": "showEllipsis",
+                    "defaultValue": "false",
+                    "description": "<p>Whether to show ellipsis </p>\n",
+                    "line": 48
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "pageChange",
+                    "defaultValue": "new EventEmitter<PageEvent>()",
+                    "description": "<p>Emits whenever the page number changes </p>\n",
+                    "line": 54,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "pageCount",
+                    "type": "number",
+                    "optional": false,
+                    "description": "<p>The total number of pages </p>\n",
+                    "line": 63
+                },
+                {
+                    "name": "pageNumbers$",
+                    "type": "Observable<number[]>",
+                    "optional": false,
+                    "description": "<p>Observable containing the page numbers to be displayed </p>\n",
+                    "line": 66
+                },
+                {
+                    "name": "tplEllipsisRef",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 75,
+                    "decorators": [
+                        {
+                            "name": "ContentChild",
+                            "stringifiedArguments": "PaginatorEllipsis, {read: TemplateRef}"
+                        }
+                    ]
+                },
+                {
+                    "name": "tplFirstRef",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 71,
+                    "decorators": [
+                        {
+                            "name": "ContentChild",
+                            "stringifiedArguments": "PaginatorFirst, {read: TemplateRef}"
+                        }
+                    ]
+                },
+                {
+                    "name": "tplLastRef",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 74,
+                    "decorators": [
+                        {
+                            "name": "ContentChild",
+                            "stringifiedArguments": "PaginatorLast, {read: TemplateRef}"
+                        }
+                    ]
+                },
+                {
+                    "name": "tplNextRef",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 73,
+                    "decorators": [
+                        {
+                            "name": "ContentChild",
+                            "stringifiedArguments": "PaginatorNext, {read: TemplateRef}"
+                        }
+                    ]
+                },
+                {
+                    "name": "tplPrevRef",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 72,
+                    "decorators": [
+                        {
+                            "name": "ContentChild",
+                            "stringifiedArguments": "PaginatorPrev, {read: TemplateRef}"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getPageCount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 142,
+                    "description": "<p>Gets the total number of pages.</p>\n"
+                },
+                {
+                    "name": "getPages",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 86,
+                    "description": "<p>Get the page numbers.</p>\n"
+                },
+                {
+                    "name": "getRangePadding",
+                    "args": [
+                        {
+                            "name": "length",
+                            "type": "number"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "{}",
+                    "typeParameters": [],
+                    "line": 111,
+                    "description": "<p>Calculates the padding to be applied on the range.</p>\n<p>Pages that would&#39;ve been shown on the left side are added to the right - and\nthe other way around. This way we always show an equal amount of pages.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "length",
+                            "type": "number",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "isPageNumber",
+                    "args": [
+                        {
+                            "name": "page",
+                            "type": "number"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 152,
+                    "description": "<p>Determine whether the given page number is valid.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "page",
+                            "type": "number",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 79,
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 198,
+                    "description": "<p>Invoked when the component is destroyed.</p>\n"
+                },
+                {
+                    "name": "selectPage",
+                    "args": [
+                        {
+                            "name": "page",
+                            "type": "number"
+                        },
+                        {
+                            "name": "event",
+                            "type": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 159,
+                    "description": "<p>Selects the given page number.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "page",
+                            "type": "number",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "event",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "hostBindings": [
+                {
+                    "name": "attr.role",
+                    "defaultValue": "'navigation'",
+                    "line": 69
+                },
+                {
+                    "name": "class",
+                    "defaultValue": "'ui-paginator'",
+                    "line": 68
+                }
+            ],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "changeDetector",
+                        "type": "ChangeDetectorRef"
+                    }
+                ],
+                "line": 75,
+                "jsdoctags": [
+                    {
+                        "name": "changeDetector",
+                        "type": "ChangeDetectorRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnChanges",
+                "OnDestroy"
+            ],
+            "accessors": {
+                "page": {
+                    "name": "page",
+                    "setSignature": {
+                        "name": "page",
+                        "type": "void",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "number"
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 29,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "number",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "rangeStart": {
+                    "name": "rangeStart",
+                    "getSignature": {
+                        "name": "rangeStart",
+                        "type": "number",
+                        "returnType": "number",
+                        "line": 128,
+                        "description": "<p>The start of range.</p>\n"
+                    }
+                },
+                "rangeLength": {
+                    "name": "rangeLength",
+                    "getSignature": {
+                        "name": "rangeLength",
+                        "type": "number",
+                        "returnType": "number",
+                        "line": 135,
+                        "description": "<p>The length of the range.</p>\n"
+                    }
+                },
+                "hasPrevEllipsis": {
+                    "name": "hasPrevEllipsis",
+                    "getSignature": {
+                        "name": "hasPrevEllipsis",
+                        "type": "",
+                        "returnType": "",
+                        "line": 170,
+                        "description": "<p>Whether the paginator should show ellipsis for previous pages.</p>\n"
+                    }
+                },
+                "hasNextEllipsis": {
+                    "name": "hasNextEllipsis",
+                    "getSignature": {
+                        "name": "hasNextEllipsis",
+                        "type": "",
+                        "returnType": "",
+                        "line": 177,
+                        "description": "<p>Whether the paginator should show ellipsis for next pages.</p>\n"
+                    }
+                },
+                "prevDisabled": {
+                    "name": "prevDisabled",
+                    "getSignature": {
+                        "name": "prevDisabled",
+                        "type": "",
+                        "returnType": "",
+                        "line": 184,
+                        "description": "<p>Whether the previous links should be disabled.</p>\n"
+                    }
+                },
+                "nextDisabled": {
+                    "name": "nextDisabled",
+                    "getSignature": {
+                        "name": "nextDisabled",
+                        "type": "",
+                        "returnType": "",
+                        "line": 191,
+                        "description": "<p>Whether the next links should be disabled.</p>\n"
+                    }
+                }
+            },
+            "templateData": "<ng-template #tplFirst><span aria-hidden=\"true\">&laquo;</span></ng-template>\n<ng-template #tplPrev><span aria-hidden=\"true\">&lsaquo;</span></ng-template>\n<ng-template #tplNext><span aria-hidden=\"true\">&rsaquo;</span></ng-template>\n<ng-template #tplLast><span aria-hidden=\"true\">&raquo;</span></ng-template>\n<ng-template #tplEllipsis>...</ng-template>\n\n<ul class=\"paginator-items\" *ngIf=\"pageCount > 1\">\n\n  <li class=\"paginator-item\" *ngIf=\"showBoundaryLinks\" [class.disabled]=\"prevDisabled\">\n    <a href class=\"paginator-link\" aria-label=\"First\"\n       [attr.aria-disabled]=\"prevDisabled\"\n       (click)=\"selectPage(1, $event)\">\n      <ng-template [ngTemplateOutlet]=\"tplFirstRef || tplFirst\"></ng-template>\n    </a>\n  </li>\n\n  <li class=\"paginator-item\" [class.disabled]=\"prevDisabled\">\n    <a href class=\"paginator-link\" aria-label=\"Previous\"\n       [attr.aria-disabled]=\"prevDisabled\"\n       (click)=\"selectPage(page - 1, $event)\">\n      <ng-template [ngTemplateOutlet]=\"tplPrevRef || tplPrev\"></ng-template>\n    </a>\n  </li>\n\n  <li class=\"paginator-item disabled\" *ngIf=\"hasPrevEllipsis\">\n    <span class=\"paginator-link\">\n      <ng-template [ngTemplateOutlet]=\"tplEllipsisRef || tplEllipsis\"></ng-template>\n    </span>\n  </li>\n\n  <li class=\"paginator-item\" *ngFor=\"let pageNumber of pageNumbers$ | async\"\n      [class.active]=\"pageNumber === page\"\n      [class.disabled]=\"disabled\"\n      [attr.aria-current]=\"pageNumber === page ? 'page' : null\">\n    <a href class=\"paginator-link\"\n       [attr.aria-disabled]=\"disabled\"\n       (click)=\"selectPage(pageNumber, $event)\">\n      {{ pageNumber }}\n    </a>\n  </li>\n\n  <li class=\"paginator-item disabled\" *ngIf=\"hasNextEllipsis\">\n    <span class=\"paginator-link\">\n      <ng-template [ngTemplateOutlet]=\"tplEllipsisRef || tplEllipsis\"></ng-template>\n    </span>\n  </li>\n\n  <li class=\"paginator-item\" [class.disabled]=\"nextDisabled\">\n    <a href class=\"paginator-link\" aria-label=\"Next\"\n       (click)=\"selectPage(page + 1, $event)\"\n       [attr.aria-disabled]=\"nextDisabled\">\n      <ng-template [ngTemplateOutlet]=\"tplNextRef || tplNext\"></ng-template>\n    </a>\n  </li>\n\n  <li class=\"paginator-item\" *ngIf=\"showBoundaryLinks\" [class.disabled]=\"nextDisabled\">\n    <a href class=\"paginator-link\" aria-label=\"Last\"\n       (click)=\"selectPage(pageCount, $event)\"\n       [attr.aria-disabled]=\"nextDisabled\">\n      <ng-template [ngTemplateOutlet]=\"tplLastRef || tplLast\"></ng-template>\n    </a>\n  </li>\n\n</ul>\n"
+        },
+        {
+            "name": "TooltipContainerComponent",
+            "id": "component-TooltipContainerComponent-b78df03e21218013bc1ac8fbc697493e",
+            "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip-container.component.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ui-tooltip",
+            "styleUrls": [],
+            "styles": [],
+            "template": "{{ content }}",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "animationState",
+                    "defaultValue": "AnimationState.Initial",
+                    "type": "AnimationState",
+                    "optional": false,
+                    "description": "<p>State of the animation </p>\n",
+                    "line": 40
+                },
+                {
+                    "name": "animationStateChanged$",
+                    "defaultValue": "new EventEmitter<AbstractAnimationEvent>()",
+                    "type": "",
+                    "optional": false,
+                    "description": "<p>Emits when the animation state changed </p>\n",
+                    "line": 43,
+                    "modifierKind": [
+                        132
+                    ]
+                },
+                {
+                    "name": "content",
+                    "type": "string",
+                    "optional": false,
+                    "description": "<p>Content to display in the tooltip </p>\n",
+                    "line": 31
+                },
+                {
+                    "name": "position",
+                    "type": "TooltipPosition",
+                    "optional": false,
+                    "description": "<p>Position of the tooltip </p>\n",
+                    "line": 34
+                },
+                {
+                    "name": "tooltipClass",
+                    "type": "string",
+                    "optional": false,
+                    "description": "<p>Custom class to be added to the tooltip </p>\n",
+                    "line": 37
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "afterHidden",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<void>",
+                    "typeParameters": [],
+                    "line": 94,
+                    "description": "<p>Notifies once after the tooltip was hidden.</p>\n"
+                },
+                {
+                    "name": "afterShown",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Observable<void>",
+                    "typeParameters": [],
+                    "line": 85,
+                    "description": "<p>Notifies once after the tooltip was shown.</p>\n"
+                },
+                {
+                    "name": "animationEvent",
+                    "args": [
+                        {
+                            "name": "phaseName",
+                            "type": "AnimationPhase"
+                        },
+                        {
+                            "name": "toState",
+                            "type": "AnimationState"
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<AbstractAnimationEvent>",
+                    "typeParameters": [],
+                    "line": 110,
+                    "description": "<p>Gets the tooltip animation events matching the given criteria.</p>\n",
+                    "jsdoctags": [
+                        {
+                            "name": "phaseName",
+                            "type": "AnimationPhase",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "toState",
+                            "type": "AnimationState",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "hide",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 78,
+                    "description": "<p>Start hiding the tooltip.</p>\n"
+                },
+                {
+                    "name": "isShowing",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 103,
+                    "description": "<p>Whether the tooltip is (busy) showing.</p>\n"
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60
+                },
+                {
+                    "name": "show",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 71,
+                    "description": "<p>Start showing the tooltip.</p>\n"
+                }
+            ],
+            "hostBindings": [
+                {
+                    "name": "@tooltip",
+                    "line": 47
+                },
+                {
+                    "name": "attr.role",
+                    "defaultValue": "'tooltip'",
+                    "line": 45
+                }
+            ],
+            "hostListeners": [
+                {
+                    "name": "@tooltip.start",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": ""
+                        }
+                    ],
+                    "argsDecorator": [
+                        "$event"
+                    ],
+                    "line": 53
+                }
+            ],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef"
+                    }
+                ],
+                "line": 47,
+                "jsdoctags": [
+                    {
+                        "name": "elementRef",
+                        "type": "ElementRef",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "name": "DialogModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "DialogService"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "DialogCloseDirective"
+                        },
+                        {
+                            "name": "DialogContainerComponent"
+                        },
+                        {
+                            "name": "DialogContentDirective"
+                        },
+                        {
+                            "name": "DialogFooterDirective"
+                        },
+                        {
+                            "name": "DialogTitleDirective"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "DialogCloseDirective"
+                        },
+                        {
+                            "name": "DialogContainerComponent"
+                        },
+                        {
+                            "name": "DialogContentDirective"
+                        },
+                        {
+                            "name": "DialogFooterDirective"
+                        },
+                        {
+                            "name": "DialogTitleDirective"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "PaginatorModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "PaginatorComponent"
+                        },
+                        {
+                            "name": "PaginatorEllipsis"
+                        },
+                        {
+                            "name": "PaginatorFirst"
+                        },
+                        {
+                            "name": "PaginatorLast"
+                        },
+                        {
+                            "name": "PaginatorNext"
+                        },
+                        {
+                            "name": "PaginatorPrev"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "PaginatorComponent"
+                        },
+                        {
+                            "name": "PaginatorEllipsis"
+                        },
+                        {
+                            "name": "PaginatorFirst"
+                        },
+                        {
+                            "name": "PaginatorLast"
+                        },
+                        {
+                            "name": "PaginatorNext"
+                        },
+                        {
+                            "name": "PaginatorPrev"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "TooltipModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "TooltipContainerComponent"
+                        },
+                        {
+                            "name": "TooltipDirective"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "TooltipDirective"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "animationEvents",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                "type": "",
+                "defaultValue": "getAnimationEvents()"
+            },
+            {
+                "name": "animationsSupported",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                "type": "",
+                "defaultValue": "!!animationEvents"
+            },
+            {
+                "name": "animationTimeout",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                "type": "number",
+                "defaultValue": "1000"
+            },
+            {
+                "name": "animationTimeout",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip-container.component.ts",
+                "type": "number",
+                "defaultValue": "500"
+            },
+            {
+                "name": "baseClass",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                "type": "string",
+                "defaultValue": "'ui-dialog'"
+            },
+            {
+                "name": "baseClass",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip-container.component.ts",
+                "type": "string",
+                "defaultValue": "'ui-tooltip'"
+            },
+            {
+                "name": "ConnectedPositions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip.enum.ts",
+                "type": "literal type",
+                "defaultValue": "{\r\n  [TooltipPosition.Top]: {\r\n    originX: 'center',\r\n    originY: 'top',\r\n    overlayX: 'center',\r\n    overlayY: 'bottom'\r\n  },\r\n  [TooltipPosition.Right]: {\r\n    originX: 'end',\r\n    originY: 'center',\r\n    overlayX: 'start',\r\n    overlayY: 'center'\r\n  },\r\n  [TooltipPosition.Bottom]: {\r\n    originX: 'center',\r\n    originY: 'bottom',\r\n    overlayX: 'center',\r\n    overlayY: 'top'\r\n  },\r\n  [TooltipPosition.Left]: {\r\n    originX: 'start',\r\n    originY: 'center',\r\n    overlayX: 'end',\r\n    overlayY: 'center',\r\n  }\r\n}",
+                "description": "<p>Connected position relative to the target element.</p>\n"
+            },
+            {
+                "name": "DEFAULT_PARAMS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  duration: 280,\r\n  delay: 0,\r\n  timingFunction: 'cubic-bezier(0.25, 0.8, 0.25, 1)'\r\n}"
+            },
+            {
+                "name": "DEFAULT_PARAMS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "object",
+                "defaultValue": "{\r\n  duration: 280,\r\n  delay: 0,\r\n  timingFunction: 'cubic-bezier(0.25, 0, 0.25, 1)'\r\n}"
+            },
+            {
+                "name": "fadeIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('enter', 0, 0, 0, 0)"
+            },
+            {
+                "name": "fadeInDown",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('enter', 0, '-20%', 0, 0)"
+            },
+            {
+                "name": "fadeInLeft",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('enter', '-20%', 0, 0, 0)"
+            },
+            {
+                "name": "fadeInRight",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('enter', '20', 0, 0, 0)"
+            },
+            {
+                "name": "fadeInUp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('enter', 0, '20%', 0, 0)"
+            },
+            {
+                "name": "fadeOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('exit', 0, 0, 0, 0)"
+            },
+            {
+                "name": "fadeOutDown",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('exit', 0, 0, 0, '-20%')"
+            },
+            {
+                "name": "fadeOutLeft",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('exit', 0, 0, '-20%', 0)"
+            },
+            {
+                "name": "fadeOutRight",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('exit', 0, 0, '20%', 0)"
+            },
+            {
+                "name": "fadeOutUp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "type": "",
+                "defaultValue": "fadeAnimation('exit', 0, 0, 0, '20%')"
+            },
+            {
+                "name": "matchers",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/testing/matchers.ts",
+                "type": "object",
+                "defaultValue": "{\r\n\r\n  toHaveCssClass(): jasmine.CustomMatcher {\r\n    return {\r\n      compare: check(false),\r\n      negativeCompare: check(true)\r\n    };\r\n\r\n    function check(isNot: boolean) {\r\n      return (actual: HTMLElement, className: string): jasmine.CustomMatcherResult => ({\r\n        pass: actual.classList.contains(className) === !isNot,\r\n        message: `Expected ${actual.outerHTML} ${isNot ? 'not ' : ''}to contain the CSS class \"${className}\"`\r\n      })\r\n    }\r\n  }\r\n\r\n}",
+                "description": "<p>Global custom matchers for Jasmine.</p>\n"
+            },
+            {
+                "name": "scaleIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('enter', 0.6, 1)"
+            },
+            {
+                "name": "scaleInDown",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('enter', 0.6, 1, 'top')"
+            },
+            {
+                "name": "scaleInLeft",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('enter', 0.6, 1, 'right')"
+            },
+            {
+                "name": "scaleInRight",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('enter', 0.6, 1, 'left')"
+            },
+            {
+                "name": "scaleInUp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('enter', 0.6, 1, 'bottom')"
+            },
+            {
+                "name": "scaleOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('leave', 1, 0.6)"
+            },
+            {
+                "name": "scaleOutDown",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('leave', 1, 0.6, 'top')"
+            },
+            {
+                "name": "scaleOutLeft",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('leave', 1, 0.6, 'right')"
+            },
+            {
+                "name": "scaleOutRight",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('leave', 1, 0.6, 'left')"
+            },
+            {
+                "name": "scaleOutUp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "type": "",
+                "defaultValue": "scaleAnimation('leave', 1, 0.6, 'bottom')"
+            },
+            {
+                "name": "styleDeclaration",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+                "type": "",
+                "defaultValue": "document.createElement('div').style"
+            },
+            {
+                "name": "uniqueId",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                "type": "number",
+                "defaultValue": "0"
+            }
+        ],
+        "functions": [
+            {
+                "name": "classNames",
+                "file": "projects/ngx-ui-components/src/lib/core/utils.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Construct a string of class names.</p>\n",
+                "args": [
+                    {
+                        "name": "names",
+                        "dotDotDotToken": true
+                    }
+                ],
+                "returnType": "string",
+                "jsdoctags": [
+                    {
+                        "name": "names",
+                        "dotDotDotToken": true,
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "createGenericTestComponent",
+                "file": "projects/ngx-ui-components/src/lib/core/testing/common.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Creates a (host) component with the given template for convenient testing.</p>\n",
+                "args": [
+                    {
+                        "name": "component"
+                    },
+                    {
+                        "name": "template"
+                    },
+                    {
+                        "name": "detectChanges",
+                        "type": ""
+                    }
+                ],
+                "returnType": "ComponentFixture<T>",
+                "jsdoctags": [
+                    {
+                        "name": "component",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "template",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "detectChanges",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "dialogAnimation",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog-animation.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>The default dialog animation.</p>\n",
+                "args": []
+            },
+            {
+                "name": "fadeAnimation",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Produces a reusable fade animation.</p>\n",
+                "args": [
+                    {
+                        "name": "state"
+                    },
+                    {
+                        "name": "startX"
+                    },
+                    {
+                        "name": "startY"
+                    },
+                    {
+                        "name": "endX"
+                    },
+                    {
+                        "name": "endY"
+                    }
+                ],
+                "returnType": "AnimationReferenceMetadata",
+                "jsdoctags": [
+                    {
+                        "name": {
+                            "pos": 942,
+                            "end": 947,
+                            "flags": 0,
+                            "escapedText": "state"
+                        },
+                        "tagName": {
+                            "pos": 936,
+                            "end": 941,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>State of the animation, either &#39;enter&#39; or &#39;exit&#39;</p>\n"
+                    },
+                    {
+                        "name": {
+                            "pos": 1010,
+                            "end": 1016,
+                            "flags": 0,
+                            "escapedText": "startX"
+                        },
+                        "tagName": {
+                            "pos": 1004,
+                            "end": 1009,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>The starting X coordinate</p>\n"
+                    },
+                    {
+                        "name": {
+                            "pos": 1055,
+                            "end": 1061,
+                            "flags": 0,
+                            "escapedText": "startY"
+                        },
+                        "tagName": {
+                            "pos": 1049,
+                            "end": 1054,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>The starting Y coordinate</p>\n"
+                    },
+                    {
+                        "name": {
+                            "pos": 1100,
+                            "end": 1104,
+                            "flags": 0,
+                            "escapedText": "endX"
+                        },
+                        "tagName": {
+                            "pos": 1094,
+                            "end": 1099,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>The ending X coordinate</p>\n"
+                    },
+                    {
+                        "name": {
+                            "pos": 1143,
+                            "end": 1147,
+                            "flags": 0,
+                            "escapedText": "endY"
+                        },
+                        "tagName": {
+                            "pos": 1137,
+                            "end": 1142,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>The ending Y coordinate</p>\n"
+                    }
+                ]
+            },
+            {
+                "name": "fadeEnd",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Gets the ending styles for the fade animation.</p>\n",
+                "args": [
+                    {
+                        "name": "state",
+                        "type": ""
+                    },
+                    {
+                        "name": "x",
+                        "type": ""
+                    },
+                    {
+                        "name": "y",
+                        "type": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "state",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "x",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "y",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "fadeStart",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Gets the starting styles for the fade animation.</p>\n",
+                "args": [
+                    {
+                        "name": "state",
+                        "type": ""
+                    },
+                    {
+                        "name": "x",
+                        "type": ""
+                    },
+                    {
+                        "name": "y",
+                        "type": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "state",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "x",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "y",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "getAnimationEvents",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Get the supported animation event names.</p>\n<p>For cross-browser support, we need to include the prefix when necessary.</p>\n",
+                "args": [],
+                "returnType": "AnimationEventName | null"
+            },
+            {
+                "name": "getSupported",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Get the supported property name.</p>\n",
+                "args": [
+                    {
+                        "name": "props"
+                    }
+                ],
+                "returnType": "any | null",
+                "jsdoctags": [
+                    {
+                        "name": "props",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "scaleAnimation",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Produces a reusable scale animation.</p>\n",
+                "args": [
+                    {
+                        "name": "state"
+                    },
+                    {
+                        "name": "startScale"
+                    },
+                    {
+                        "name": "endScale"
+                    },
+                    {
+                        "name": "transformOrigin",
+                        "optional": true
+                    }
+                ],
+                "returnType": "AnimationReferenceMetadata",
+                "jsdoctags": [
+                    {
+                        "name": {
+                            "pos": 959,
+                            "end": 964,
+                            "flags": 0,
+                            "escapedText": "state"
+                        },
+                        "tagName": {
+                            "pos": 953,
+                            "end": 958,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>State of the animation, either &#39;enter&#39; or &#39;leave&#39;</p>\n"
+                    },
+                    {
+                        "name": {
+                            "pos": 1038,
+                            "end": 1048,
+                            "flags": 0,
+                            "escapedText": "startScale"
+                        },
+                        "tagName": {
+                            "pos": 1032,
+                            "end": 1037,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>The starting scale size</p>\n"
+                    },
+                    {
+                        "name": {
+                            "pos": 1091,
+                            "end": 1099,
+                            "flags": 0,
+                            "escapedText": "endScale"
+                        },
+                        "tagName": {
+                            "pos": 1085,
+                            "end": 1090,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>The ending scale size</p>\n"
+                    },
+                    {
+                        "name": {
+                            "pos": 1142,
+                            "end": 1157,
+                            "flags": 0,
+                            "escapedText": "transformOrigin"
+                        },
+                        "optional": true,
+                        "tagName": {
+                            "pos": 1136,
+                            "end": 1141,
+                            "flags": 0,
+                            "escapedText": "param"
+                        },
+                        "comment": "<p>Origin of the transformation</p>\n"
+                    }
+                ]
+            },
+            {
+                "name": "scaleEnd",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Gets the ending styles for the scale animation.</p>\n",
+                "args": [
+                    {
+                        "name": "state",
+                        "type": ""
+                    },
+                    {
+                        "name": "scale",
+                        "type": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "state",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "scale",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "scaleStart",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>Gets the starting styles for the scale animation.</p>\n",
+                "args": [
+                    {
+                        "name": "state",
+                        "type": ""
+                    },
+                    {
+                        "name": "scale",
+                        "type": ""
+                    },
+                    {
+                        "name": "transformOrigin",
+                        "type": "",
+                        "optional": true
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "state",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "scale",
+                        "type": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "transformOrigin",
+                        "type": "",
+                        "optional": true,
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "tooltipAnimation",
+                "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip-animation.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "description": "<p>The default tooltip animation.</p>\n",
+                "args": []
+            }
+        ],
+        "typealiases": [
+            {
+                "name": "DialogRole",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"dialog\" | \"alertdialog\"",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog.interface.ts",
+                "description": "",
+                "kind": 168
+            }
+        ],
+        "enumerations": [
+            {
+                "name": "AnimationPhase",
+                "childs": [
+                    {
+                        "name": "Start",
+                        "value": "start"
+                    },
+                    {
+                        "name": "Done",
+                        "value": "done"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "<p>Default animation phase </p>\n",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts"
+            },
+            {
+                "name": "AnimationState",
+                "childs": [
+                    {
+                        "name": "Initial",
+                        "value": "initial"
+                    },
+                    {
+                        "name": "Enter",
+                        "value": "enter"
+                    },
+                    {
+                        "name": "Exit",
+                        "value": "exit"
+                    },
+                    {
+                        "name": "Void",
+                        "value": "void"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "<p>Default animation state </p>\n",
+                "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts"
+            },
+            {
+                "name": "KeyCode",
+                "childs": [
+                    {
+                        "name": "Escape",
+                        "value": "Escape"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "",
+                "file": "projects/ngx-ui-components/src/lib/dialog/dialog-ref.ts"
+            },
+            {
+                "name": "TooltipPosition",
+                "childs": [
+                    {
+                        "name": "Top",
+                        "value": "top"
+                    },
+                    {
+                        "name": "Right",
+                        "value": "right"
+                    },
+                    {
+                        "name": "Bottom",
+                        "value": "bottom"
+                    },
+                    {
+                        "name": "Left",
+                        "value": "left"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "description": "",
+                "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip.enum.ts"
+            }
+        ],
+        "groupedVariables": {
+            "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts": [
+                {
+                    "name": "animationEvents",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                    "type": "",
+                    "defaultValue": "getAnimationEvents()"
+                },
+                {
+                    "name": "animationsSupported",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                    "type": "",
+                    "defaultValue": "!!animationEvents"
+                },
+                {
+                    "name": "animationTimeout",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                    "type": "number",
+                    "defaultValue": "1000"
+                },
+                {
+                    "name": "baseClass",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                    "type": "string",
+                    "defaultValue": "'ui-dialog'"
+                },
+                {
+                    "name": "uniqueId",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog-container.component.ts",
+                    "type": "number",
+                    "defaultValue": "0"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/tooltip/tooltip-container.component.ts": [
+                {
+                    "name": "animationTimeout",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip-container.component.ts",
+                    "type": "number",
+                    "defaultValue": "500"
+                },
+                {
+                    "name": "baseClass",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip-container.component.ts",
+                    "type": "string",
+                    "defaultValue": "'ui-tooltip'"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/tooltip/tooltip.enum.ts": [
+                {
+                    "name": "ConnectedPositions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip.enum.ts",
+                    "type": "literal type",
+                    "defaultValue": "{\r\n  [TooltipPosition.Top]: {\r\n    originX: 'center',\r\n    originY: 'top',\r\n    overlayX: 'center',\r\n    overlayY: 'bottom'\r\n  },\r\n  [TooltipPosition.Right]: {\r\n    originX: 'end',\r\n    originY: 'center',\r\n    overlayX: 'start',\r\n    overlayY: 'center'\r\n  },\r\n  [TooltipPosition.Bottom]: {\r\n    originX: 'center',\r\n    originY: 'bottom',\r\n    overlayX: 'center',\r\n    overlayY: 'top'\r\n  },\r\n  [TooltipPosition.Left]: {\r\n    originX: 'start',\r\n    originY: 'center',\r\n    overlayX: 'end',\r\n    overlayY: 'center',\r\n  }\r\n}",
+                    "description": "<p>Connected position relative to the target element.</p>\n"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts": [
+                {
+                    "name": "DEFAULT_PARAMS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  duration: 280,\r\n  delay: 0,\r\n  timingFunction: 'cubic-bezier(0.25, 0.8, 0.25, 1)'\r\n}"
+                },
+                {
+                    "name": "fadeIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('enter', 0, 0, 0, 0)"
+                },
+                {
+                    "name": "fadeInDown",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('enter', 0, '-20%', 0, 0)"
+                },
+                {
+                    "name": "fadeInLeft",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('enter', '-20%', 0, 0, 0)"
+                },
+                {
+                    "name": "fadeInRight",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('enter', '20', 0, 0, 0)"
+                },
+                {
+                    "name": "fadeInUp",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('enter', 0, '20%', 0, 0)"
+                },
+                {
+                    "name": "fadeOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('exit', 0, 0, 0, 0)"
+                },
+                {
+                    "name": "fadeOutDown",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('exit', 0, 0, 0, '-20%')"
+                },
+                {
+                    "name": "fadeOutLeft",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('exit', 0, 0, '-20%', 0)"
+                },
+                {
+                    "name": "fadeOutRight",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('exit', 0, 0, '20%', 0)"
+                },
+                {
+                    "name": "fadeOutUp",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "type": "",
+                    "defaultValue": "fadeAnimation('exit', 0, 0, 0, '20%')"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts": [
+                {
+                    "name": "DEFAULT_PARAMS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n  duration: 280,\r\n  delay: 0,\r\n  timingFunction: 'cubic-bezier(0.25, 0, 0.25, 1)'\r\n}"
+                },
+                {
+                    "name": "scaleIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('enter', 0.6, 1)"
+                },
+                {
+                    "name": "scaleInDown",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('enter', 0.6, 1, 'top')"
+                },
+                {
+                    "name": "scaleInLeft",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('enter', 0.6, 1, 'right')"
+                },
+                {
+                    "name": "scaleInRight",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('enter', 0.6, 1, 'left')"
+                },
+                {
+                    "name": "scaleInUp",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('enter', 0.6, 1, 'bottom')"
+                },
+                {
+                    "name": "scaleOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('leave', 1, 0.6)"
+                },
+                {
+                    "name": "scaleOutDown",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('leave', 1, 0.6, 'top')"
+                },
+                {
+                    "name": "scaleOutLeft",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('leave', 1, 0.6, 'right')"
+                },
+                {
+                    "name": "scaleOutRight",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('leave', 1, 0.6, 'left')"
+                },
+                {
+                    "name": "scaleOutUp",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "type": "",
+                    "defaultValue": "scaleAnimation('leave', 1, 0.6, 'bottom')"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/testing/matchers.ts": [
+                {
+                    "name": "matchers",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/testing/matchers.ts",
+                    "type": "object",
+                    "defaultValue": "{\r\n\r\n  toHaveCssClass(): jasmine.CustomMatcher {\r\n    return {\r\n      compare: check(false),\r\n      negativeCompare: check(true)\r\n    };\r\n\r\n    function check(isNot: boolean) {\r\n      return (actual: HTMLElement, className: string): jasmine.CustomMatcherResult => ({\r\n        pass: actual.classList.contains(className) === !isNot,\r\n        message: `Expected ${actual.outerHTML} ${isNot ? 'not ' : ''}to contain the CSS class \"${className}\"`\r\n      })\r\n    }\r\n  }\r\n\r\n}",
+                    "description": "<p>Global custom matchers for Jasmine.</p>\n"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/animations/utils.ts": [
+                {
+                    "name": "styleDeclaration",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+                    "type": "",
+                    "defaultValue": "document.createElement('div').style"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "projects/ngx-ui-components/src/lib/core/utils.ts": [
+                {
+                    "name": "classNames",
+                    "file": "projects/ngx-ui-components/src/lib/core/utils.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Construct a string of class names.</p>\n",
+                    "args": [
+                        {
+                            "name": "names",
+                            "dotDotDotToken": true
+                        }
+                    ],
+                    "returnType": "string",
+                    "jsdoctags": [
+                        {
+                            "name": "names",
+                            "dotDotDotToken": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/testing/common.ts": [
+                {
+                    "name": "createGenericTestComponent",
+                    "file": "projects/ngx-ui-components/src/lib/core/testing/common.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Creates a (host) component with the given template for convenient testing.</p>\n",
+                    "args": [
+                        {
+                            "name": "component"
+                        },
+                        {
+                            "name": "template"
+                        },
+                        {
+                            "name": "detectChanges",
+                            "type": ""
+                        }
+                    ],
+                    "returnType": "ComponentFixture<T>",
+                    "jsdoctags": [
+                        {
+                            "name": "component",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "template",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "detectChanges",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/dialog/dialog-animation.ts": [
+                {
+                    "name": "dialogAnimation",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog-animation.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>The default dialog animation.</p>\n",
+                    "args": []
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts": [
+                {
+                    "name": "fadeAnimation",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Produces a reusable fade animation.</p>\n",
+                    "args": [
+                        {
+                            "name": "state"
+                        },
+                        {
+                            "name": "startX"
+                        },
+                        {
+                            "name": "startY"
+                        },
+                        {
+                            "name": "endX"
+                        },
+                        {
+                            "name": "endY"
+                        }
+                    ],
+                    "returnType": "AnimationReferenceMetadata",
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 942,
+                                "end": 947,
+                                "flags": 0,
+                                "escapedText": "state"
+                            },
+                            "tagName": {
+                                "pos": 936,
+                                "end": 941,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>State of the animation, either &#39;enter&#39; or &#39;exit&#39;</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1010,
+                                "end": 1016,
+                                "flags": 0,
+                                "escapedText": "startX"
+                            },
+                            "tagName": {
+                                "pos": 1004,
+                                "end": 1009,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>The starting X coordinate</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1055,
+                                "end": 1061,
+                                "flags": 0,
+                                "escapedText": "startY"
+                            },
+                            "tagName": {
+                                "pos": 1049,
+                                "end": 1054,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>The starting Y coordinate</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1100,
+                                "end": 1104,
+                                "flags": 0,
+                                "escapedText": "endX"
+                            },
+                            "tagName": {
+                                "pos": 1094,
+                                "end": 1099,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>The ending X coordinate</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1143,
+                                "end": 1147,
+                                "flags": 0,
+                                "escapedText": "endY"
+                            },
+                            "tagName": {
+                                "pos": 1137,
+                                "end": 1142,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>The ending Y coordinate</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "fadeEnd",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Gets the ending styles for the fade animation.</p>\n",
+                    "args": [
+                        {
+                            "name": "state",
+                            "type": ""
+                        },
+                        {
+                            "name": "x",
+                            "type": ""
+                        },
+                        {
+                            "name": "y",
+                            "type": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "state",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "x",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "y",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "fadeStart",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/fade.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Gets the starting styles for the fade animation.</p>\n",
+                    "args": [
+                        {
+                            "name": "state",
+                            "type": ""
+                        },
+                        {
+                            "name": "x",
+                            "type": ""
+                        },
+                        {
+                            "name": "y",
+                            "type": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "state",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "x",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "y",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/animations/utils.ts": [
+                {
+                    "name": "getAnimationEvents",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Get the supported animation event names.</p>\n<p>For cross-browser support, we need to include the prefix when necessary.</p>\n",
+                    "args": [],
+                    "returnType": "AnimationEventName | null"
+                },
+                {
+                    "name": "getSupported",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Get the supported property name.</p>\n",
+                    "args": [
+                        {
+                            "name": "props"
+                        }
+                    ],
+                    "returnType": "any | null",
+                    "jsdoctags": [
+                        {
+                            "name": "props",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts": [
+                {
+                    "name": "scaleAnimation",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Produces a reusable scale animation.</p>\n",
+                    "args": [
+                        {
+                            "name": "state"
+                        },
+                        {
+                            "name": "startScale"
+                        },
+                        {
+                            "name": "endScale"
+                        },
+                        {
+                            "name": "transformOrigin",
+                            "optional": true
+                        }
+                    ],
+                    "returnType": "AnimationReferenceMetadata",
+                    "jsdoctags": [
+                        {
+                            "name": {
+                                "pos": 959,
+                                "end": 964,
+                                "flags": 0,
+                                "escapedText": "state"
+                            },
+                            "tagName": {
+                                "pos": 953,
+                                "end": 958,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>State of the animation, either &#39;enter&#39; or &#39;leave&#39;</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1038,
+                                "end": 1048,
+                                "flags": 0,
+                                "escapedText": "startScale"
+                            },
+                            "tagName": {
+                                "pos": 1032,
+                                "end": 1037,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>The starting scale size</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1091,
+                                "end": 1099,
+                                "flags": 0,
+                                "escapedText": "endScale"
+                            },
+                            "tagName": {
+                                "pos": 1085,
+                                "end": 1090,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>The ending scale size</p>\n"
+                        },
+                        {
+                            "name": {
+                                "pos": 1142,
+                                "end": 1157,
+                                "flags": 0,
+                                "escapedText": "transformOrigin"
+                            },
+                            "optional": true,
+                            "tagName": {
+                                "pos": 1136,
+                                "end": 1141,
+                                "flags": 0,
+                                "escapedText": "param"
+                            },
+                            "comment": "<p>Origin of the transformation</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "scaleEnd",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Gets the ending styles for the scale animation.</p>\n",
+                    "args": [
+                        {
+                            "name": "state",
+                            "type": ""
+                        },
+                        {
+                            "name": "scale",
+                            "type": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "state",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "scale",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "scaleStart",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/types/scale.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>Gets the starting styles for the scale animation.</p>\n",
+                    "args": [
+                        {
+                            "name": "state",
+                            "type": ""
+                        },
+                        {
+                            "name": "scale",
+                            "type": ""
+                        },
+                        {
+                            "name": "transformOrigin",
+                            "type": "",
+                            "optional": true
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "state",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "scale",
+                            "type": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "transformOrigin",
+                            "type": "",
+                            "optional": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/tooltip/tooltip-animation.ts": [
+                {
+                    "name": "tooltipAnimation",
+                    "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip-animation.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "description": "<p>The default tooltip animation.</p>\n",
+                    "args": []
+                }
+            ]
+        },
+        "groupedEnumerations": {
+            "projects/ngx-ui-components/src/lib/core/animations/utils.ts": [
+                {
+                    "name": "AnimationPhase",
+                    "childs": [
+                        {
+                            "name": "Start",
+                            "value": "start"
+                        },
+                        {
+                            "name": "Done",
+                            "value": "done"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "<p>Default animation phase </p>\n",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts"
+                },
+                {
+                    "name": "AnimationState",
+                    "childs": [
+                        {
+                            "name": "Initial",
+                            "value": "initial"
+                        },
+                        {
+                            "name": "Enter",
+                            "value": "enter"
+                        },
+                        {
+                            "name": "Exit",
+                            "value": "exit"
+                        },
+                        {
+                            "name": "Void",
+                            "value": "void"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "<p>Default animation state </p>\n",
+                    "file": "projects/ngx-ui-components/src/lib/core/animations/utils.ts"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/dialog/dialog-ref.ts": [
+                {
+                    "name": "KeyCode",
+                    "childs": [
+                        {
+                            "name": "Escape",
+                            "value": "Escape"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog-ref.ts"
+                }
+            ],
+            "projects/ngx-ui-components/src/lib/tooltip/tooltip.enum.ts": [
+                {
+                    "name": "TooltipPosition",
+                    "childs": [
+                        {
+                            "name": "Top",
+                            "value": "top"
+                        },
+                        {
+                            "name": "Right",
+                            "value": "right"
+                        },
+                        {
+                            "name": "Bottom",
+                            "value": "bottom"
+                        },
+                        {
+                            "name": "Left",
+                            "value": "left"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "description": "",
+                    "file": "projects/ngx-ui-components/src/lib/tooltip/tooltip.enum.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {
+            "projects/ngx-ui-components/src/lib/dialog/dialog.interface.ts": [
+                {
+                    "name": "DialogRole",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"dialog\" | \"alertdialog\"",
+                    "file": "projects/ngx-ui-components/src/lib/dialog/dialog.interface.ts",
+                    "description": "",
+                    "kind": 168
+                }
+            ]
+        }
+    },
+    "routes": []
+}
