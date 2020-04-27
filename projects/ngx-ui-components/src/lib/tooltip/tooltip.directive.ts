@@ -18,25 +18,25 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class TooltipDirective implements OnInit, OnDestroy {
   /** Content of the tooltip */
-  @Input('uiTooltip') content = '';
+  @Input('uiTooltip') content: string;
 
   /** Position of the tooltip relative to the origin */
   @Input() position: string = TooltipPosition.Bottom;
 
   /** The delay before showing the tooltip */
-  @Input() showDelay = 50;
+  @Input() showDelay: number = 50;
 
   /** The delay before hiding the tooltip */
-  @Input() hideDelay = 0;
+  @Input() hideDelay: number = 0;
 
   /** Whether the tooltip is disabled */
   @Input() disabled: boolean;
 
   /** Emits when the tooltip is done showing */
-  @Output() shown = new EventEmitter<void>();
+  @Output() shown: EventEmitter<void> = new EventEmitter();
 
   /** Emits when the tooltip is done hiding */
-  @Output() hidden = new EventEmitter<void>();
+  @Output() hidden: EventEmitter<void> = new EventEmitter();
 
   /** Subject that notifies when the directive is destroyed */
   private destroyed$ = new Subject<void>();
