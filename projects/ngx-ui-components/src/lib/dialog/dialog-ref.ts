@@ -9,6 +9,9 @@ enum KeyCode {
 
 export class DialogRef<T = any> {
 
+  /** Unique generated identifier for the dialog */
+  public readonly id: string = this.containerInstance.attrId;
+
   /** The instance of component opened into the dialog. */
   public componentInstance: T;
 
@@ -23,8 +26,7 @@ export class DialogRef<T = any> {
 
   constructor(
     private overlayRef: OverlayRef,
-    public containerInstance: DialogContainerComponent,
-    public readonly id = containerInstance.attrId
+    public containerInstance: DialogContainerComponent
   ) {
     containerInstance.nextAnimationEvent(AnimationPhase.Done, AnimationState.Enter).subscribe(() => {
       this.afterOpened$.next();

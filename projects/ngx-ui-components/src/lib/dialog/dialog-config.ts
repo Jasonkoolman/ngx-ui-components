@@ -12,22 +12,22 @@ export class DialogConfig<D = any> {
   size?: DialogSize;
 
   /** Whether the dialog has a backdrop. */
-  hasBackdrop? = true;
+  hasBackdrop?: boolean = true;
 
   /** Whether the dialog should close when the user clicks on the backdrop. */
-  closeOnBackdropClick? = true;
+  closeOnBackdropClick?: boolean = true;
 
   /** Whether the dialog should close when the user presses escape. */
-  closeOnEscape? = true;
+  closeOnEscape?: boolean = true;
 
   /** Whether the dialog should close when the user goes backwards/forwards in history. */
-  closeOnNavigation? = true;
+  closeOnNavigation?: boolean = true;
 
   /** Whether the dialog should focus the first focusable element on open. */
-  autoFocus? = true;
+  autoFocus?: boolean = true;
 
   /** Whether the dialog should listen to CSS animations instead of Angular animations. */
-  useCssAnimations? = false;
+  useCssAnimations?: boolean = false;
 
   /** ID of the element that describes the dialog. */
   ariaDescribedBy?: string | null = null;
