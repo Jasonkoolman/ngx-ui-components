@@ -85,6 +85,34 @@ code {
   border-bottom: 1px solid $border-dark;
 }
 
+.uid-docs-page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: -16px;
+  list-style: none;
+
+  a {
+    padding: 12px;
+    min-width: 60px;
+    margin-bottom: -1px;
+    color: $color-muted;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 200ms ease;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    &.active {
+      color: $color-secondary;
+      border-bottom-color: $color-secondary;
+    }
+  }
+}
+
 .ui-docs-page-content {
   padding: 16px 32px;
 }
