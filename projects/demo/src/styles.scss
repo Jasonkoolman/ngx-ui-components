@@ -3,13 +3,17 @@
 @import "~@koolm/ngx-ui-components/lib/paginator/paginator";
 @import "~@koolm/ngx-ui-components/lib/tooltip/tooltip";
 @import './assets/scss/variables';
+@import './assets/scss/mixins';
+@import './assets/scss/button';
+@import './assets/scss/grid';
 @import './assets/scss/highlight';
 
 body {
-  min-width: 320px;
-  font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  font-size: 16px;
   margin: 0;
+  min-width: 320px;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 1.5;
 }
 
 * {
@@ -19,6 +23,11 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 16px;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 pre {
@@ -41,12 +50,13 @@ code {
   align-items: center;
   color: #fff;
   background: $color-primary;
-  border-bottom: 1px solid $border-dark;
+  background: linear-gradient(to right, $color-primary, #2251cf);
 }
 
 .ui-docs-header-logo {
   width: 28px;
   margin-right: 8px;
+  display: block;
 }
 
 .ui-docs-header-title {
