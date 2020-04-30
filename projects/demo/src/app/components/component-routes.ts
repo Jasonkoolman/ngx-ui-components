@@ -7,12 +7,13 @@ import { UidComponentApi } from './views/api.component';
 export const routes: Routes = [
   {
     path: 'components/:slug',
+    data: {sidebar: true},
     resolve: {component: UidComponentResolver},
     component: UidComponentsComponent,
     children: [
-      { path: 'examples', component: UidComponentExamples },
-      { path: 'api', component: UidComponentApi },
-      { path: '', pathMatch: 'full', redirectTo: 'examples' }
+      {path: 'examples', component: UidComponentExamples},
+      {path: 'api', component: UidComponentApi},
+      {path: '', pathMatch: 'full', redirectTo: 'examples'}
     ]
   },
 ];

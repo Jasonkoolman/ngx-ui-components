@@ -1,0 +1,42 @@
+@import "../../assets/scss/variables";
+
+.uid-home-banner {
+  text-align: center;
+  padding: 60px 16px 80px;
+  color: #FFF;
+  margin-bottom: 32px;
+  background: $color-primary;
+  background: linear-gradient(to right, $color-primary, #2251cf);
+  border-bottom: 1px solid $border-light;
+  clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(90% - 2.5vw),
+      50% 99%,
+      0% calc(90% - 2.5vw)
+  );
+
+  h1 {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    color: #FFF;
+    background-color: $color-secondary;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-secondary, 2%);
+      box-shadow: 0 3px 16px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.uid-home-container {
+  padding: 16px;
+  max-width: 920px;
+  margin: 0 auto;
+}

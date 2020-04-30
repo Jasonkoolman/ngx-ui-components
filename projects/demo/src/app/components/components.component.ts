@@ -16,7 +16,8 @@ export class UidComponentsComponent {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private changeDetector: ChangeDetectorRef
+    private changeDetector: ChangeDetectorRef,
+
   ) {
     router.events
       .pipe(filter(e => e instanceof NavigationEnd))

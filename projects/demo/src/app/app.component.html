@@ -1,7 +1,9 @@
 <div class="ui-docs">
 
   <header class="ui-docs-header">
-    <img class="ui-docs-header-logo" src="assets/img/logo.svg" width="28" alt="ngx-ui-components">
+    <a routerLink="/">
+      <img class="ui-docs-header-logo" src="assets/img/logo.svg" width="28" alt="ngx-ui-components">
+    </a>
     <span class="ui-docs-header-title">UI Components</span>
     <a class="ui-docs-header-icon" href="https://github.com/JasonKoolman/ngx-ui-components" title="GitHub">
       <svg width="24" height="24" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -13,7 +15,7 @@
   </header>
 
   <div class="ui-docs-content">
-    <aside class="ui-docs-sidebar">
+    <aside class="ui-docs-sidebar" *ngIf="showSidebar">
       <nav class="ui-docs-nav" [@listAnimation]="menuItems.length">
         <a *ngFor="let item of menuItems" [routerLink]="item.path" routerLinkActive="active">
           {{ item.name }}

@@ -4,19 +4,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { routes } from './app-routes';
+import { HomeComponent } from './pages/home.component';
 import { UidComponentsModule } from './components/components.module';
 import { UiModule } from './ui.module';
+import { routes } from './app-routes';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      paramsInheritanceStrategy: 'always'
+    }),
     UiModule,
     UidComponentsModule
   ],
