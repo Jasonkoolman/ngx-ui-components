@@ -82,7 +82,6 @@ export class DialogContainerComponent implements OnInit, OnDestroy {
   @HostListener('@dialog.done', ['$event'])
   onAnimationEvent(event: AnimationEvent) {
     if (!this.useCssAnimation) {
-      // TODO: Write bug report to Angular: events are invoked when animation is disabled
       this.updateAnimationState(
         event.phaseName as AnimationPhase,
         event.toState as AnimationState
@@ -161,10 +160,12 @@ export class DialogContainerComponent implements OnInit, OnDestroy {
     this.previouslyFocusedElement = this.document.activeElement as HTMLElement;
     this.focusTrap = this.focusTrapFactory.create(this.elementRef.nativeElement);
 
+    // Move focus onto the dialog immediately. Needs to be async, because the element
+    // may not be focusable until the next microtask.
+    Promise.resolve().then(() => this.elementRef.nativeElement.focus());
+
     if (this.dialogConfig.autoFocus) {
       this.focusTrap.focusInitialElementWhenReady();
-    } else if (!this.hasFocus()) {
-      this.elementRef.nativeElement.focus();
     }
   }
 
