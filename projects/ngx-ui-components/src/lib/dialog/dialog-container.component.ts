@@ -187,7 +187,9 @@ export class DialogContainerComponent implements OnInit, OnDestroy {
       toFocus.focus();
     }
 
-    this.focusTrap.destroy();
+    if (this.focusTrap) {
+      this.focusTrap.destroy();
+    }
   }
 
   /**
